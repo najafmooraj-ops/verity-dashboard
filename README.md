@@ -1,23 +1,31 @@
-# Verity / MIT Indoor UAV Research Dashboard
+# Verity × MIT — Indoor UAV Research Dashboard
 
-## Scope
-Indoor applications of unmanned aerial vehicles (UAVs) only. The collector treats **drone** as a common synonym for UAV and searches both. A record must contain an aerial-vehicle term and positive evidence of an indoor environment (e.g. indoor navigation, warehouse, distribution centre, factory, enclosed space, or racking inspection). Outdoor-only applications are excluded.
+A public-facing research dashboard focused on indoor UAV (unmanned aerial vehicle) and drone applications in warehouses and industrial facilities.
 
-Automated screening is a first-pass relevance filter, not a substitute for human review. Each record displays the indoor evidence used to include it.
+## Scope and screening
+The collector searches both **drone** and **UAV** terminology. Records need an aircraft term and positive indoor-context evidence (for example, indoor navigation, warehouse, factory, enclosed space, or racking inspection). Outdoor-only applications are excluded from the visible research library. Automated keyword screening is a first-pass filter, not a substitute for human review.
 
-## Publish publicly
-1. In Netlify, choose **Add new site → Import an existing project** and connect this GitHub repository.
-2. Set the publish directory to `.`; no build command is needed.
-3. Publish. Netlify provides the public URL.
-4. Ensure GitHub Actions are enabled. The workflow runs daily at 10:15 UTC and can be run manually from Actions.
+## Files
+- `index.html`: responsive dashboard and searchable indoor research library
+- `database.json`: literature records shown by the dashboard
+- `drone_scraper.py`: OpenAlex literature collector
+- `.github/workflows/refresh-literature.yml`: scheduled refresh workflow
+- `netlify.toml`: Netlify publish configuration
 
-When new works are found, GitHub Actions commits `database.json`. That commit triggers Netlify to redeploy the public dashboard. Your computer does not need to be on.
+## Automatic refresh
+GitHub Actions runs daily at 10:15 UTC (and can be run manually from the Actions tab). The workflow queries OpenAlex, screens for indoor UAV context, and commits new records to `database.json`. A Netlify site connected to this repository will redeploy after each database commit.
+
+## Publish with Netlify
+1. In Netlify, select **Add new site → Import an existing project**.
+2. Connect GitHub and select `najafmooraj-ops/verity-dashboard`.
+3. Leave the build command blank and use `.` as the publish directory.
+4. Deploy. Netlify will provide a public site URL.
 
 ## Local preview
-Run `python3 -m http.server 8000` in this folder and open `http://localhost:8000/drone_research_dashboard.html`.
+Run `python3 -m http.server 8000` from the repository root and open `http://localhost:8000`.
 
-## Notes
-- OpenAlex is the automated scholarly source. Google Scholar and Litmaps remain manual discovery sources.
-- A public dashboard means records are publicly viewable. Do not add confidential sponsor data or private notes.
-- The GitHub repository itself can be private while the Netlify website is public.
-- Review the indoor evidence before citing a record; keyword screening can produce false positives and false negatives.
+## Important notes
+- The current seed database contains one clearly indoor warehouse/racking record. The previously discussed 73-record local database has not yet been uploaded; upload the latest `database.json` to restore and re-screen that fuller collection.
+- Google Scholar and Litmaps remain useful complementary manual discovery sources; this automated collector currently uses OpenAlex.
+- Review the source and indoor evidence before citing a study. Keyword screening can produce false positives and false negatives.
+- This repository is currently **public**. Do not commit confidential sponsor information or private notes. If you want the source private, change repository visibility in GitHub Settings before connecting Netlify.

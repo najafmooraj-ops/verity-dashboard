@@ -1,5 +1,5 @@
 {
-  "updated_at": null,
+  "updated_at": "2026-11-15T23:44:38+00:00",
   "screening_criteria": {
     "aircraft_required": "UAV, UAS, unmanned aerial vehicle/system, drone, or aerial robot",
     "indoor_required": "Indoor, warehouse, factory, enclosed facility, racking, or indoor navigation evidence",
@@ -20,5 +20,1806 @@
       "url": "https://www.litmaps.com/"
     }
   },
-  "records": []
+  "records": [
+    {
+      "title": "Lightweight Path-Aware Frontier Re-ranking for LiDAR-Based UAV Exploration",
+      "date": "2026-11-06",
+      "year": 2026,
+      "keywords": [
+        "utility functions",
+        "OctoMap",
+        "warehouse environments",
+        "3D mapping"
+      ],
+      "summary": "Autonomous 3D exploration with UAVs requires efficient target selection under limited flight time and onboard computation. In conventional Euclidean-distance-based frontier pipelines, geometric distance may poorly represent the actual collision-free travel cost in cluttered environments, leading to inefficient frontier choices. This paper presents a lightweight path-aware frontier re-ranking method for LiDAR-based UAV exploration. The method first retains a small top-N set of promising frontier candidates using a lightweight utility function and then applies time-bounded RRT* planning to estimate their feasible path costs for re-ranking. The path generated for the selected frontier is further reused for navigation to reduce redundant global planning. Experiments in three warehouse-like environments show that the proposed method consistently produces shorter exploration trajectories than conventional frontier baselines, with traveled-distance reductions of up to 14.1%, while reducing exploration time by up to 9.5% in two environments and remaining competitive in the third. The method maintains map detail comparable to the conventional OctoMap-based baseline, demonstrating an effective trade-off between exploration efficiency and mapping quality.",
+      "url": "https://doi.org/10.48550/arxiv.2611.09561",
+      "doi": "https://doi.org/10.48550/arxiv.2611.09561",
+      "source": "arXiv (Cornell University)",
+      "indoor_evidence": [
+        "warehouse",
+        "warehouse"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Directly relevant"
+    },
+    {
+      "title": "Sybil-Resilient Multi-Drone Exploration of Indoor and Confined Spaces",
+      "date": "2026-10-24",
+      "year": 2026,
+      "keywords": [
+        "Sybil attack",
+        "drone security",
+        "indoor exploration",
+        "frontier exploration",
+        "identity verification",
+        "quarantine",
+        "cave exploration",
+        "drone-to-drone communication"
+      ],
+      "summary": "When a team of drones explores a building together, each drone tells the others which frontier it is going to and shares the map it has built. This avoids duplicated effort, but it also means that the team trusts every identity from which it receives messages. In a Sybil attack, one compromised drone creates fake identities, and these fake teammates claim frontiers and send fabricated scans, so the real drones leave parts of the building unexplored and end up with walls in their maps that do not exist. We study five such attackers, including one that seals off the openings between floors, and five levels of defence that need no security infrastructure, only the drones' own sensors and maps: an audit of received map data against what a drone sees itself, a check that a body is present where an identity claims to be, trust only for identities whose body has been seen, a quarantine for identities that no drone has observed, and a rule that binds each observed body to one identity. Tests in simulation cover 70 maps of seven kinds, from offices and tunnels to three-storey buildings and caves. Without a defence, one compromised drone leaves on average up to 25% of a map unexplored (45% in offices), and the floor-sealing attacker cuts the explored part of a three-storey building to 82.3%, or 34.6% on the worst map. The quarantine brings exploration back to the level of an unattacked team in every setting, and in most settings it also brings the false data back to that level. The exceptions are two colluding attackers, fakes placed next to real drones, three of the ten caves and a team of 16 drones, and binding bodies to identities fixes the last three. Over 2,350 missions, an honest drone was revoked by a teammate only twice.",
+      "url": "https://doi.org/10.48550/arxiv.2610.33906",
+      "doi": "https://doi.org/10.48550/arxiv.2610.33906",
+      "source": "arXiv (Cornell University)",
+      "indoor_evidence": [
+        "Indoor",
+        "indoor"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Related indoor application"
+    },
+    {
+      "title": "Benchmarking LiDAR and LiDAR-Inertial Odometry Algorithms for Embedded UAV Deployment in Warehouse Environments",
+      "date": "2026-10-16",
+      "year": 2026,
+      "keywords": [
+        "LiDAR-inertial odometry",
+        "UAV navigation",
+        "GNSS-denied navigation",
+        "warehouse environments",
+        "embedded systems",
+        "implementation costs",
+        "computation latency",
+        "LIO-SAM",
+        "benchmarking"
+      ],
+      "summary": "Reliable LiDAR-inertial odometry is central to UAV navigation in GNSS-denied indoor logistics, yet most benchmarks target ground vehicles and ignore the compute limits of aerial platforms. We benchmark six systems spanning two modalities and three estimator families-LiDAR-only (F-LOAM, KISS-ICP) and, within tightly coupled LiDAR-inertial estimation, filter-based (FAST-LIO2, Faster-LIO), graph-optimisation-based (liorf, from LIO-SAM) and geometric-observer-based (DLIO)-on flight data from a motion-capture laboratory and an operational warehouse. We identify and correct four ways a per-scan latency figure misleads; one misstates a system's cost fourfold. When identical data are replayed on a workstation and on the vehicle's computer, accuracy transfers to within 3 mm, while cost does not: the penalty tracks how far an implementation distributes its work, and on the passively cooled target it moves by up to a factor of two between sessions whose trajectories agree within millimetres. The workstation's most accurate system collapses on the target, silently discarding up to two-thirds of its input while latency, coverage and memory report normal operation. Of the two systems that stay inexpensive, within budget and consistent with the reference, Faster-LIO is the cheaper; used as the vehicle's position source, it reduced the onboard visual-inertial estimator's typical error on all eight closed-loop flights.",
+      "url": "https://doi.org/10.3390/s26206568",
+      "doi": "https://doi.org/10.3390/s26206568",
+      "source": "Sensors",
+      "indoor_evidence": [
+        "Warehouse",
+        "indoor",
+        "warehouse",
+        "warehouse"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Directly relevant"
+    },
+    {
+      "title": "Parrot Mambo Minidrone as a benchmark platform for low-cost UAV research: a review of control, autonomy, software validation, safety and experimental evaluation",
+      "date": "2026-10-12",
+      "year": 2026,
+      "keywords": [
+        "low-cost UAV",
+        "benchmark platform",
+        "UAV control",
+        "PID control",
+        "sliding mode control",
+        "model predictive control",
+        "reinforcement learning",
+        "fault-tolerant control",
+        "observer-based control",
+        "human-drone interaction",
+        "software validation",
+        "cyber resilience",
+        "UAV safety",
+        "multi-UAV coordination",
+        "visual navigation",
+        "engineering education"
+      ],
+      "summary": "Low-cost minidrone platforms are increasingly used in Unmanned Aerial Vehicle (UAV) research for safe indoor experimentation, controller development and engineering education. The Parrot Mambo Minidrone is particularly attractive because of its compact size, onboard sensing, MATLAB/Simulink compatibility and suitability for real-time validation. This review critically synthesises 137 studies published between 2018 and 2026 involving the Parrot Mambo, including studies where it appears alongside other UAV platforms. The literature spans modelling, state estimation, classical and intelligent control, robust nonlinear control, disturbance rejection, vision-based navigation, multi-UAV coordination, Human-Drone Interaction (HDI), software validation, cyber-resilience, education, safety analysis, energy-aware evaluation and hardware performance. A platform-centred taxonomy is developed to trace progression from Proportional-Integral-Derivative (PID)-based stabilisation toward adaptive, intelligent, perception-driven, software-aware and safety-conscious autonomy. PID and Proportional-Integral–Proportional-Derivative (PI-PD) controllers remain important baselines, while fuzzy-PID, Sliding Mode Control (SMC), Model Predictive Control (MPC), Model-Free Control (MFC), Reinforcement Learning (RL), Observer-Based Control (OBC) and Fault-Tolerant Control (FTC) address nonlinearities, disturbances, uncertainty and hardware constraints. However, software testing, cyber-resilience, fault diagnosis, reachability analysis, actuator health, aerodynamic constraints and energy-aware evaluation remain weakly integrated. The principal gap is the absence of a standardised benchmark jointly assessing control accuracy, robustness, perception reliability, energy use, computational load, software dependability, cyber-resilience, safety, actuator constraints and real-flight repeatability. Accordingly, this review proposes a benchmark-driven framework for integrated, safety-aware, hardware-aware and reproducible Parrot Mambo research.",
+      "url": "https://doi.org/10.1080/21642583.2026.2745852",
+      "doi": "https://doi.org/10.1080/21642583.2026.2745852",
+      "source": "Systems Science & Control Engineering",
+      "indoor_evidence": [
+        "indoor"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Related indoor application"
+    },
+    {
+      "title": "Edge-Assisted Multi-View Localization for Low-Altitude Economy under GPS-Challenged Environments",
+      "date": "2026-09-28",
+      "year": 2026,
+      "keywords": [
+        "UAV positioning",
+        "edge computing",
+        "GPS-denied environments",
+        "visual matching",
+        "image retrieval",
+        "value of information",
+        "variational information bottleneck",
+        "low-altitude economy",
+        "street canyon"
+      ],
+      "summary": "Unmanned aerial vehicles (UAVs) serving the low-altitude economy require reliable localization in urban canyons, indoor facilities, and other GPS-challenged environments. Visual matching with a geo-tagged database provides an alternative source for absolute positioning, but onboard computation and energy limits motivate offloading the database and matching pipeline to an edge server. The resulting localization quality depends on what visual information can reach the edge in time under varying wireless-communication and edge-computing resources. In this paper, we propose a network-adaptive edge-assisted multi-view localization framework that combines scalable orthogonality-regularized variational information bottleneck (O-VIB) encoding, value-of-information (VOI)-guided request control, and value-aware edge scheduling. We design an O-VIB model that supports nested latent prefixes from 8 to 128 dimensions and four UAV view modes. Each UAV requests edge assistance when the predicted localization-risk reduction exceeds the communication and service costs. On CARLA multi-view UAV data, VOI-guided control can lower the mean and 95th-percentile (p95) route errors by 24.8% and 31.0%, respectively, relative to budgeted periodic offloading under a matched per-route traffic budget. In indoor UAV experiments with motion-capture ground truth, our design can lower the mean position error by 28.0% relative to uncompressed all-view CLIP retrieval while cutting the descriptor traffic by 98.6%, using a 0.145 KB semantic representation. Under high congestion, a VOI-weighted scheduler with waiting-age and deadline shaping can lower the edge-side p95 latency of the top-10% high-value requests from 137.7 ms to 32.8 ms.",
+      "url": "https://doi.org/10.48550/arxiv.2609.35173",
+      "doi": "https://doi.org/10.48550/arxiv.2609.35173",
+      "source": "arXiv (Cornell University)",
+      "indoor_evidence": [
+        "indoor",
+        "indoor",
+        "GPS-denied"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Related indoor application"
+    },
+    {
+      "title": "AgenticSwarm: Semantic Perception and Adaptive Task Allocation for Heterogeneous Multi-UAV Missions",
+      "date": "2026-09-18",
+      "year": 2026,
+      "keywords": [
+        "semantic perception",
+        "adaptive task allocation",
+        "mission planning",
+        "natural language instructions",
+        "mission replanning",
+        "energy-aware path planning",
+        "Segment Anything Model"
+      ],
+      "summary": "Multi UAV missions in complex environments require the system to understand both the surrounding scene and the intent of a human operator while maintaining feasible task allocation as mission conditions change. This paper presents AgenticSwarm, an agentic framework for semantic perception and adaptive task allocation in heterogeneous multi UAV missions. An agent interprets aerial imagery and natural language instructions to construct a grounded mission representation that links perceived objects and regions with task requirements, capability constraints, and mission dependencies. This information augments a constrained task allocation process in which obstacle aware path feasibility, energy consumption, and protected return home requirements are incorporated before assignment. During execution, changes such as UAV failure, battery degradation, or task modification trigger residual mission reconstruction from the current system state, while completed work and reconnaissance progress are retained. AgenticSwarm is evaluated across five diverse Gazebo environments and an indoor real test environment, demonstrating its ability to connect semantic reasoning with constrained allocation and adaptive multi UAV mission execution. Compared with a Grounding DINO+SAM~2.1 perception baseline, the SAM3-based pipeline improves class-aware recall by 25.2 percentage points (pp) and semantic label accuracy by 29.5 pp. Ablating residual mission replanning increases mean repeated work from 0% to 61.7% and post-event recovery time by 58.6%, highlighting the contribution of adaptive replanning to mission execution.",
+      "url": "https://doi.org/10.48550/arxiv.2609.21716",
+      "doi": "https://doi.org/10.48550/arxiv.2609.21716",
+      "source": "arXiv (Cornell University)",
+      "indoor_evidence": [
+        "indoor"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Related indoor application"
+    },
+    {
+      "title": "A GTSAM-Based Monocular Visual-Inertial Odometry for Indoor UAVs: Robust Initialization and Single-Configuration Validation on EuRoC",
+      "date": "2026-09-09",
+      "year": 2026,
+      "keywords": [
+        "visual-inertial odometry",
+        "IMU pre-integration",
+        "VINS-Mono",
+        "warehouse logistics",
+        "marginalization",
+        "GPS-denied localization"
+      ],
+      "summary": "Reliable localization without GPS is a prerequisite for autonomous unmanned aerial vehicles (UAVs) operating inside warehouses, where a lightweight monocular camera paired with an inertial measurement unit (IMU) and onboard computer are the minimal sensing and processing an onboard platform can carry. This paper presents a tightly coupled monocular point-feature visual-inertial odometry (VIO) system for that setting, realized on a GTSAM fixed-lag factor graph with inverse-depth landmarks, on-manifold IMU preintegration, and an online loop-closure pose graph. The system is developed as the initial estimation stage of an autonomous stock-management UAV under development for indoor logistics warehouses. The decisive design element is the bootstrap: the metric, gravity-aligned initialization of a monocular estimator is well conditioned only under a translation-rich trajectory, a condition the near-zero-baseline pickup and takeoff transient that opens every indoor flight violates. Building on the visual-inertial alignment of VINS-Mono, we harden this step with a pre-bundle-adjust conditioning gate and a continuous-window initialization that refines the whole bootstrap window inside the smoother instead of freezing a single seed. On all eleven EuRoC MAV sequences, indoor flight tests recorded onboard a micro air vehicle in an industrial hall and two instrumented rooms, one fixed configuration per operating environment converges on every sequence, including three that otherwise diverge by tens to thousands of meters, and, driven by the same feature stream as locally run VINS-Mono and PL-VINS baselines, attains the better pure-odometry accuracy on nine of the eleven, with ATE RMSE of 0.12–0.37 m on the Machine Hall, a margin a paired signed-rank test confirms against VINS-Mono and leaves unconfirmed against PL-VINS at this sample size. We identify the stock fixed-lag marginalization as the principal consistency limitation and outline First-Estimates-Jacobian marginalization as the route to a more consistent estimator, establishing a characterized point-only baseline on one public benchmark as the starting point for subsequent on-platform work.",
+      "url": "https://doi.org/10.3390/drones10090685",
+      "doi": "https://doi.org/10.3390/drones10090685",
+      "source": "Drones",
+      "indoor_evidence": [
+        "Indoor",
+        "indoor",
+        "indoor",
+        "indoor",
+        "warehouse",
+        "GPS-denied"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Directly relevant"
+    },
+    {
+      "title": "Explainable and cyber-resilient vision transformers for joint steering and collision-avoidance perception in autonomous drone navigation: a multi-task Grad-CAM framework",
+      "date": "2026-09-09",
+      "year": 2026,
+      "keywords": [
+        "autonomous drones",
+        "micro air vehicles",
+        "vision transformer",
+        "Grad-CAM",
+        "explainable AI",
+        "collision avoidance",
+        "steering control",
+        "corridor following",
+        "GNSS-denied navigation",
+        "multi-task learning",
+        "saliency maps",
+        "label imbalance",
+        "distribution shift",
+        "cyber resilience",
+        "indoor navigation",
+        "model interpretability"
+      ],
+      "summary": "Micro aerial vehicles (MAVs) flying through indoor corridors and other GNSS-denied environments cannot rely on satellite positioning, so a single monocular RGB camera is often the only sensing modality available. The navigation objective addressed in this paper is reactive, map-free corridor following: from each camera frame the onboard perception stack must choose a discrete steering direction that keeps the vehicle advancing along the corridor while avoiding walls and obstacles, rather than tracking a pre-specified waypoint, route, or global path. Prior work (DroNet, PULP-DroNet) addresses this problem with lightweight convolutional networks that map camera frames directly to a steering command and a collision flag; this paper asks whether a Vision Transformer can perform the same mapping with higher accuracy while remaining auditable. We present ViTDrone, an explainable artificial intelligence (XAI) framework that couples a Vision Transformer (ViT-Base/16) backbone with multi-task learning and gradient-weighted class activation mapping (Grad-CAM). From a single shared backbone the model simultaneously predicts a three-class steering command (left/forward/right) and a binary collision label. We build a scalable data pipeline that aggregates 309 acquisition sequences of the PULP-DroNet v3 benchmark, yielding 195,455 training and 76,390 test frames annotated with yaw-rate commands and collision risk. After five epochs of AdamW fine-tuning from ImageNet-21k weights, ViTDrone attains 76.35% yaw classification accuracy and 60.77% collision accuracy. To make the model auditable we adapt Grad-CAM to the transformer with a reshape transform over the patch tokens. The resulting saliency maps are reassuring: the network looks where a human pilot would, at floor-wall boundaries when it decides to turn and at overhead structure when it senses a collision. However, aggregate accuracy conceals substantial variation across classes. A per-class analysis, combining loss curves, confusion matrices, and a comparison against convolutional baselines, shows that the reported accuracies are driven disproportionately by the two majority classes (forward steering and no-collision), wh",
+      "url": "https://doi.org/10.3389/ffutr.2026.1923890",
+      "doi": "https://doi.org/10.3389/ffutr.2026.1923890",
+      "source": "Frontiers in Future Transportation",
+      "indoor_evidence": [
+        "indoor",
+        "indoor"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Directly relevant"
+    },
+    {
+      "title": "GTSAM-Based GraphSLAM Using Visual Barcode Landmarks for Indoor Warehouse Mapping",
+      "date": "2026-09-02",
+      "year": 2026,
+      "keywords": [
+        "graph-based SLAM",
+        "UAV positioning",
+        "GPS-denied navigation",
+        "factor graph optimization",
+        "inventory management"
+      ],
+      "summary": "Abstract not available in OpenAlex; review the source.",
+      "url": "https://doi.org/10.1007/978-3-032-30156-7_47",
+      "doi": "https://doi.org/10.1007/978-3-032-30156-7_47",
+      "source": "Lecture notes in networks and systems",
+      "indoor_evidence": [
+        "Indoor",
+        "Warehouse",
+        "GPS-denied"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Directly relevant"
+    },
+    {
+      "title": "Smart Robotic Inspection of Levees and Culverts: A Scoping Review of Robotic Platforms, Sensing Technologies, AI Methods, and Multi-Robot Coordination for Flood-Control Infrastructure",
+      "date": "2026-11-03",
+      "year": 2026,
+      "keywords": [
+        "levee inspection",
+        "culvert inspection",
+        "flood control structures",
+        "autonomous robots",
+        "unmanned aerial vehicles",
+        "unmanned ground vehicles",
+        "autonomous underwater vehicles",
+        "thermal infrared imaging",
+        "LiDAR",
+        "sonar",
+        "ground penetrating radar",
+        "defect detection",
+        "semantic segmentation",
+        "GPS-denied navigation",
+        "SLAM",
+        "multi-robot coordination",
+        "digital twin",
+        "predictive maintenance"
+      ],
+      "summary": "Abstract Earthen levees, dikes, flood-control embankments, culverts, and stormwater drainage conduits represent vital lifelines for mitigating catastrophic inun-dation in urban and rural watersheds. However, conventional manual walk-downs and tethered closed-circuit television (CCTV) surveys remain severely labor-intensive, hazardous, subjective, and difficult to scale across vegetated, flooded, submerged, and GPS-denied environments. Autonomous robotics, multimodal remote sensing, deep-learning-based computer vision, and multi-robot coordination offer transformative opportunities to enhance inspection frequency, spatial accuracy, and maintenance decision-making. Following the Joanna Briggs Institute (JBI) methodology and the PRISMA extension for Scoping Reviews (PRISMA-ScR), this study maps the multidisciplinary land-scape across six major scholarly databases: Scopus, Web of Science, IEEE Xplore, ScienceDirect, SpringerLink, and Google Scholar (2010–2026). Out of 1,860 initially retrieved records, 1,314 unique studies were screened, 212 full texts were assessed, and 64 primary empirical studies were systemati-cally synthesized. We chart the evidence across seven interconnected the-matic streams: (1) unmanned aerial vehicle (UAV) corridor surveying; (2) unmanned ground vehicles (UGVs) and pipe crawlers; (3) amphibious and autonomous underwater vehicles (AUVs/ROVs); (4) multimodal sensor fusion (RGB, thermal infrared, LiDAR, sonar, and GPR); (5) deep learning for defect detection and semantic segmentation; (6) degraded-environment SLAM and GPS-denied navigation; and (7) multi-robot coordination, com-munication relays, and digital-twin maintenance integration. Quantitative findings show that while aerial thermal/RGB levee inspection and in-pipe YOLO/U-Net defect detection achieve high localized accuracy (mAP ex-ceeding 75–86%, segmentation IoU > 0.71), end-to-end systems integration remains scarce. Only 10.9% (n = 7) of the literature validates heterogeneous multi-domain robot teams in operational flood-control environments, and fewer than 5% close the loop from automated anomaly detection to predic-tive maintenance prioritization. To bridge these gaps, we propose",
+      "url": "https://doi.org/10.21203/rs.3.rs-11579944/v1",
+      "doi": "https://doi.org/10.21203/rs.3.rs-11579944/v1",
+      "source": "Research Square",
+      "indoor_evidence": [
+        "GPS-denied",
+        "GPS-denied",
+        "GPS-denied"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Related indoor application"
+    },
+    {
+      "title": "Beyond Trial-and-Error: A Geospatial-Guided Active Reasoning Framework for Robust Aerial Vision-and-Language Navigation",
+      "date": "2026-10-30",
+      "year": 2026,
+      "keywords": [
+        "UAV navigation",
+        "geospatial reasoning",
+        "zero-shot navigation",
+        "urban environment"
+      ],
+      "summary": "Aerial Vision-and-Language Navigation (VLN) requires UAVs to locate language-specified goals in large-scale urban environments, where objects often appear small and visually ambiguous from high-altitude viewpoints. Existing methods largely follow a reactive paradigm common in indoor VLN, repeatedly updating navigation states from local observations while underutilizing the geospatial structure that remains stable during navigation. As a result, visually similar distractors can cause a reactive goal search to repeatedly reinforce locally plausible goal hypotheses based on passively accumulated evidence, leading to unreliable localization. To address this, we propose GeoReasoner, a robust framework that shifts the paradigm of Aerial VLN from reactive trial-and-error to geospatial-guided active reasoning. Specifically, GeoReasoner first performs pre-search geospatial reasoning to derive region-level priors and constrain the goal hypothesis space. Building on these, it further conducts hypothesis-driven exploration to actively acquire discriminative evidence and refine competing goal hypotheses. Finally, consistency-aware goal verification adversarially assesses complementary evidence sources before stopping, hence reducing premature or erroneous goal confirmations. Experiments on the real-world CityNav benchmark demonstrate that GeoReasoner sets a new SOTA among zero-shot Aerial VLN methods while competing favorably with supervised approaches.",
+      "url": "https://doi.org/10.48550/arxiv.2610.41446",
+      "doi": "https://doi.org/10.48550/arxiv.2610.41446",
+      "source": "arXiv (Cornell University)",
+      "indoor_evidence": [
+        "indoor"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Related indoor application"
+    },
+    {
+      "title": "Investigation of Low-Energy Glass Crack Detection in Photovoltaic Modules during Daylight Electroluminescence Inspections",
+      "date": "2026-10-26",
+      "year": 2026,
+      "keywords": [
+        "photovoltaic modules",
+        "crack detection",
+        "diffuse illumination",
+        "direct illumination",
+        "InGaAs camera",
+        "UAV inspection",
+        "moisture ingress",
+        "crack orientation"
+      ],
+      "summary": "Glass breakage is an increasing concern in modern photovoltaic (PV) modules. Low-energy glass cracks may not cause immediate power loss but can compromise module integrity and facilitate moisture ingress. Detecting these cracks during field inspections is challenging, as they can be difficult to distinguish in conventional imaging techniques. Previous work demonstrated the feasibility of detecting low-energy glass cracks using motion-based daylight electroluminescence (EL) imaging from an unmanned aerial vehicle (UAV). This study investigates the physical conditions influencing crack visibility, focusing on camera motion direction and irradiance conditions. Controlled indoor experiments were performed using an InGaAs camera and a motorized tripod to introduce horizontal, vertical, and multidirectional motion. Outdoor experiments were conducted under low-irradiance conditions with direct and diffuse illumination, complemented by a UAV-based inspection at DTU's PV plant. The results show that camera motion direction influences crack visibility according to crack orientation, while multidirectional motion enables the detection of cracks with different orientations. Furthermore, low-energy glass cracks were visible under low irradiance when a direct irradiance component was present, whereas predominantly diffuse illumination did not provide sufficient visibility.",
+      "url": "https://doi.org/10.4229/eupvsec2026/4co.9.5",
+      "doi": "https://doi.org/10.4229/eupvsec2026/4co.9.5",
+      "source": "EU PVSEC",
+      "indoor_evidence": [
+        "indoor"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Related indoor application"
+    },
+    {
+      "title": "Physics-Informed and Data-Driven Composite Disturbance Separation and Predictive Control for Airborne Electro-Optical Gimbals with Multiple Constraints",
+      "date": "2026-10-26",
+      "year": 2026,
+      "keywords": [
+        "model predictive control",
+        "periodic disturbance compensation",
+        "input delay",
+        "actuator constraints",
+        "line-of-sight stabilization",
+        "parameter mismatch"
+      ],
+      "summary": "This paper studies the constrained pointing control problem of airborne electro-optical gimbals subjected to composite periodic and aperiodic disturbances. Under carrier vibration, input delay, and actuator constraints, achieving line-of-sight stabilization and tracking is challenging. A disturbance-separated model predictive control (MPC) scheme is proposed to compensate these heterogeneous disturbances according to their physical characteristics. An adaptive periodic observer predicts multi-harmonic vibrations over the MPC horizon using linear-regression frequency estimation. A linear observer estimates the aperiodic disturbance, and a bounded long short-term memory (LSTM) network predicts its change over the input delay. Embedding periodic predictions into the MPC model while applying aperiodic compensation outside the optimizer limits amplification of aperiodic estimation errors and improves pointing accuracy under frequency changes and parameter mismatch. On the stated headroom envelope, input-set tightening provides feasible commands within the prescribed limits, and a regional practical tracking bound is established under explicit input-sequence and predicted-state margin conditions. A UAV-mounted two-axis gimbal platform is assembled for comparative indoor hovering experiments, complemented by simulations under frequency changes and parameter mismatch. In the reported trials, the proposed method achieves yaw and pitch relative-angle root-mean-square errors (RMSEs) of 0.770 degrees and 0.350 degrees, reducing tracking errors by 25.1% and 45.9% compared with linear active disturbance rejection control.",
+      "url": "https://doi.org/10.48550/arxiv.2610.34849",
+      "doi": "https://doi.org/10.48550/arxiv.2610.34849",
+      "source": "arXiv (Cornell University)",
+      "indoor_evidence": [
+        "indoor"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Directly relevant"
+    },
+    {
+      "title": "Monte Carlo-Based Indoor UAV Localization in Dynamic Environments Using Only Four Onboard Range Sensors",
+      "date": "2026-10-23",
+      "year": 2026,
+      "keywords": [
+        "dynamic environments",
+        "dynamic obstacles",
+        "particle injection",
+        "ray casting",
+        "localization uncertainty",
+        "heading measurement"
+      ],
+      "summary": "Indoor UAV localization with minimal onboard sensing remains challenging, particularly in dynamic environments. We propose augmented filtered Monte Carlo localization (AF-MCL) for 2D localization using only four single-point range sensors and measured heading. AF-MCL rejects range measurements inconsistent with the known static map and adaptively injects particles to recover from localization divergence and kidnapping. Beam classification is performed only at the previous position estimate, making its ray-casting cost independent of the particle count. The particle distribution additionally provides an online measure of localization uncertainty. Real-world experiments in a 2.10x1.63 m environment yield mean position errors of 6.4-7.7 cm under static and dynamic conditions. Simulations in 6x6 m and 10x10 m environments yield 4.5-5.2 cm mean errors; under dynamic obstacles, standard MCL reaches 12.3 cm and reliable MCL 7.7 cm. The results show that robust indoor localization under dynamic obstacles is achievable with only four single-point range measurements and heading.",
+      "url": "https://doi.org/10.48550/arxiv.2610.32645",
+      "doi": "https://doi.org/10.48550/arxiv.2610.32645",
+      "source": "arXiv (Cornell University)",
+      "indoor_evidence": [
+        "Indoor",
+        "Indoor",
+        "indoor"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Related indoor application"
+    },
+    {
+      "title": "EdgeCurator: Efficient Cross-Modal Grounding for Real-Time Language-Guided UAV Navigation",
+      "date": "2026-10-22",
+      "year": 2026,
+      "keywords": [
+        "cross-modal grounding",
+        "UAV navigation",
+        "language-guided navigation",
+        "vision-language models",
+        "feature-level fusion",
+        "deformable cross-attention",
+        "lightweight models",
+        "real-time inference",
+        "edge computing",
+        "indoor navigation",
+        "sim-to-real transfer",
+        "museum curation",
+        "Jetson Orin NX"
+      ],
+      "summary": "Deploying cross-modal representations on a micro Unmanned Aerial Vehicle (UAV) requires accurate language–vision alignment and low-latency inference under tight compute constraints. Heavy Vision-Language Models (VLMs) provide strong semantic reasoning but are often unsuitable for an onboard control loop, whereas lightweight visual backbones commonly defer language fusion to a separate planning stage. We present EdgeCurator, a compact end-to-end early-fusion framework for real-time language-guided UAV navigation in access-controlled indoor spaces. Its Semantic-Spatial Grounding (SSG) Head converts lightweight text embeddings into semantic queries and uses conditioned deformable cross-attention to sparsely sample multi-scale visual features. On the custom Expo-VLN benchmark, EdgeCurator uses 14.8M parameters, runs at 54 FPS on an NVIDIA Jetson Orin NX, and reaches 67.3% grounding accuracy and 62.8% navigation success. We additionally report 60 controlled physical trials with two target types, achieving 78.3% success. These trials test onboard Sim2Real feasibility for pre-opening inspection and curation assistance; they do not establish operation around visitors or generalization to full exhibition deployments. The results position EdgeCurator as an efficiency-oriented cross-modal representation and grounding system for resource-constrained aerial agents.",
+      "url": "https://doi.org/10.1145/3840749.3841574",
+      "doi": "https://doi.org/10.1145/3840749.3841574",
+      "source": "OpenAlex",
+      "indoor_evidence": [
+        "indoor",
+        "indoor"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Related indoor application"
+    },
+    {
+      "title": "Evaluation and Experimentation of Tensile Mechanics in Relation to Repurposed Marine Netting and Industrial Polymers for FPV Drone Defense",
+      "date": "2026-10-21",
+      "year": 2026,
+      "keywords": [
+        "first-person view drones",
+        "polyamide 66",
+        "high-density polyethylene",
+        "polypropylene",
+        "tensile strength",
+        "strain energy absorption",
+        "UV degradation",
+        "material selection",
+        "multi-criteria decision making"
+      ],
+      "summary": "Passive kinetic barriers present a low-cost, zero-power countermeasure against First-Person View (FPV) unmanned aerial vehicles (UA Vs) in tactical environments where active RF jamming or electronic countermeasures are restricted or ineffective. This paper evaluates the technical viability of repurposing disused commercial fishing netting; specifically Polyamide 6.6 (Nylon), High-Density Polyethylene (HDPE), and Polypropylene (PP) Copolymer recovered from port infrastructure as deployable anti drone meshes. Utilizing secondary mechanical datasets and analytical structural mechanics models, candidate polymers were evaluated across kinetic strain energy absorption ( 𝑈 = ∫ 𝐹(𝑥)𝑑𝑥), dynamic rotor shear survival ( τ), catenary suspension anchor loads ( 𝑇𝑦0= 𝑤𝐿2/8ℎ 𝐹𝑑), and crosswind aerodynamic drag. Analytical results demonstrate that while Nylon 6.6 provides the highest strain energy absorption density (𝑈) due to its high tensile strength (85MPa) and low initial mass per unit area, its hygroscopic nature (8% water absorption) and rapid UV degradation limit long-term field stability. Conversely, HDPE (1.40mm strand diameter) and Polypropylene (1.50mm strand diameter) successfully survive rotor impact shear stresses across 4-strand and 32-strand configurations, with HDPE achieving a safety factor margin of 0.10x yield stress under a 192. 90𝐽kinetic impact. A Multi-Criteria Decision Analysis (MCDA) across two operational scenarios establishes HDPE as the optimal material for long-span outdoor perimeter defense due to its complete hydrophobicity, cut resistance, and superior UV longevity, whereas Nylon 6.6 remains superior for compact, indoor structural enclosures.",
+      "url": "https://doi.org/10.31224/8595",
+      "doi": "https://doi.org/10.31224/8595",
+      "source": "OpenAlex",
+      "indoor_evidence": [
+        "indoor"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Related indoor application"
+    },
+    {
+      "title": "A Drone-Integrated Artificial Intelligence-Based System for Mass-Casualty Triage and Remote Monitoring",
+      "date": "2026-10-19",
+      "year": 2026,
+      "keywords": [
+        "mass casualty incidents",
+        "remote triage",
+        "non-contact vital sign monitoring",
+        "infrared thermography",
+        "triage decision support",
+        "real-time data transmission",
+        "emergency medical dispatch",
+        "prehospital emergency response",
+        "heart rate estimation",
+        "oxygen saturation estimation",
+        "body temperature estimation"
+      ],
+      "summary": "Abstract Objective: Triage and data transfer are critical to the medical management of mass-casualty incidents (MCIs). However, the chaotic nature of such events makes it difficult to classify casualties according to structured triage protocols. Furthermore, even when triage is implemented effectively, communication disruptions between the incident scene and dispatch centers can hinder response operations. The aim of this study was to present a drone-integrated system that enables non-contact vital sign measurement, remote triage, and real-time data transmission during MCIs. Methods: The system development process involved three steps: (1) developing the Vital-Sign Measurement Module; (2) developing the Triage Decision Support Module; and (3) developing the User Interfaces and Data Transmission Module to enable information transmission between dispatch centers and response teams. Within the Vital-Sign Measurement Module, heart rate (HR), respiratory rate (RR), oxygen saturation (SpO 2 ), and body temperature (BT) measurement algorithms were developed using the following techniques, respectively: video-based photoplethysmography (vPPG), analysis of thermal temperature fluctuations around the nose, a regression-based neural network approach, and heat maps and thermal thresholding. A pilot study was conducted under controlled indoor conditions to evaluate the accuracy of these algorithms. Results: The system can measure vital signs by processing drone-captured images, can provide triage decision support, and can transmit victims’ locations, vital signs, and triage categories to response teams and dispatch centers via dedicated user interfaces. A pilot evaluation of the Vital-Sign Measurement Module showed that the relative accuracy rate of the non-contact vital-sign measurement algorithms ranged from 86% to 99%. Conclusions: The system provides an innovative approach to improving medical response management in MCIs by enabling remote triage and monitoring. Its non-contact vital sign measurement, triage decision support, and near real-time data transmission capabilities provide an infrastructure that can contribute to faster response and improved operational coordin",
+      "url": "https://doi.org/10.1017/s1049023x26109121",
+      "doi": "https://doi.org/10.1017/s1049023x26109121",
+      "source": "Prehospital and Disaster Medicine",
+      "indoor_evidence": [
+        "indoor"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Related indoor application"
+    },
+    {
+      "title": "Collaborative Energy-Aware Indoor Drone Navigation using BLE Beacons and Multi-agent Reinforcement Learning",
+      "date": "2026-08-02",
+      "year": 2026,
+      "keywords": [
+        "Bluetooth Low Energy beacons",
+        "multi-agent reinforcement learning",
+        "UAV swarms",
+        "cooperative navigation",
+        "indoor positioning",
+        "battery energy efficiency",
+        "industrial automation",
+        "last-mile delivery"
+      ],
+      "summary": "Abstract not available in OpenAlex; review the source.",
+      "url": "https://doi.org/10.1007/978-3-032-26919-5_24",
+      "doi": "https://doi.org/10.1007/978-3-032-26919-5_24",
+      "source": "Algorithms for intelligent systems",
+      "indoor_evidence": [
+        "Indoor",
+        "indoor"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Related indoor application"
+    },
+    {
+      "title": "Beyond the Last Mile: A Systematic Review Exploring Indoor Delivery-UAV Requirements in the Last-Meter Context",
+      "date": "2026-07-02",
+      "year": 2026,
+      "keywords": [
+        "urban logistics",
+        "GNSS-denied navigation",
+        "privacy",
+        "building information modeling",
+        "building management",
+        "liability allocation",
+        "facility management"
+      ],
+      "summary": "The final stage of urban logistics does not end at the building entrance but continues within complex, vertically structured indoor environments, where conventional ground-based delivery systems face limitations in efficiency, flexibility, and scalability. This study introduces the concept of last-meter delivery, defined as unmanned aerial vehicle (UAV)-enabled transport from the building envelope to the recipient within global navigation satellite system (GNSS)-denied, building-regulated indoor space, and systematically reviews the literature from two traditionally separate domains: indoor-UAV operation in GNSS-denied spaces, and outdoor-UAV-based logistics. Following the Preferred Reporting Items for Systematic Reviews and Meta-Analyses (PRISMA) guidelines, 297 studies are synthesized through a two-stream thematic synthesis. The review makes three contributions. First, a unified analytical framework is developed across four dimensions (spatial mobility, logistical capability, social acceptance, and operational coordination) through which the two bodies of literature are shown to be largely complementary, with the gaps in one stream coinciding with the strengths of the other. Second, indoor aerial delivery is found to be subject to a distinct set of operational constraints, including micro-scale navigation accuracy, strict geometric safety envelopes, close human–UAV interaction, and privacy sensitivity, implying that indoor transport-UAVs cannot be realized through simple miniaturization of outdoor platforms but require precision-oriented, human-centric, and building-aware design. Third, the four dimensions are translated into a building-management-oriented indicator framework covering spatial compliance, handover standardization, building information modeling (BIM) integration, occupant consent, and liability allocation, reframing last-meter requirements in terms that are actionable for building planners and facility managers. By framing these challenges within the last-meter perspective, this review identifies the gap between current last-mile theories and emerging in-building aerial logistics and provides a structured foundation for future research.",
+      "url": "https://doi.org/10.3390/su18136728",
+      "doi": "https://doi.org/10.3390/su18136728",
+      "source": "Sustainability",
+      "indoor_evidence": [
+        "Indoor",
+        "indoor",
+        "indoor",
+        "indoor",
+        "indoor",
+        "indoor"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Related indoor application"
+    },
+    {
+      "title": "From Bench to Flight: Translating Drone Impact Tests into Operational Safety Limits",
+      "date": "2026-06-15",
+      "year": 2026,
+      "keywords": [
+        "micro air vehicles",
+        "impact testing",
+        "human proximity",
+        "speed limits"
+      ],
+      "summary": "Indoor micro-aerial vehicles (MAVs) are increasingly considered for tasks that bring them in close proximity to people, yet practitioners lack a practical way to tune motion limits to measured impact risk. We present an end-to-end, open toolchain that turns benchtop impact tests into deployable safety governors for drones. First, we detail a compact, replicable impact rig and protocol that captures force-time profiles across drone classes and contact surfaces. Second, we provide data-driven fits that map pre-impact speed to impulse and contact duration, enabling direct computation of speed bounds for a target force limit. Third, we release scripts and a ROS2 node that enforce these bounds online and log compliance, with hooks for facility-specific policies. We target indoor MAV platforms with protective cages, focusing on bounding blunt contact forces of the airframe rather than propeller-strike hazards. We validate runtime enforcement in a closed-loop PX4-SITL/Gazebo setup (rotor-on dynamics), while physical rotor-on impact testing is left for future work. The contribution is a practical bridge: from measured impacts to runtime limits, with sharable datasets, code, and a repeatable process that teams can adopt to certify indoor MAV operations near humans.",
+      "url": "https://doi.org/10.1109/icuas69441.2026.11598561",
+      "doi": "https://doi.org/10.1109/icuas69441.2026.11598561",
+      "source": "International Conference on Unmanned Aircraft Systems (ICUAS)",
+      "indoor_evidence": [
+        "Indoor",
+        "indoor",
+        "indoor"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Related indoor application"
+    },
+    {
+      "title": "Design of Multi-Objective Intelligent Optimization Algorithm for Indoor Drone Inspection Path Considering Energy Consumption Constraints",
+      "date": "2026-06-11",
+      "year": 2026,
+      "keywords": [
+        "path planning",
+        "multi-objective optimization",
+        "energy consumption constraints",
+        "coverage optimization",
+        "multi-objective particle swarm optimization",
+        "adaptive weighting",
+        "local search"
+      ],
+      "summary": "Indoor drone inspection is widely applied in warehousing, factory security and building O&M, yet limited indoor space, dense obstacles and drone endurance constraints make traditional path optimization algorithms unable to balance inspection efficiency, energy consumption control and full coverage. This study builds a multi-objective optimization model involving path length, energy consumption and coverage, proposes an improved MOPSO integrating adaptive weights and local search with an energy-aware fitness function and nondominated elite retention mechanism, and conducts simulation experiments against NSGA-III and basic MOPSO. The results show the proposed algorithm achieves high coverage ($\\mathbf{C} \\approx \\mathbf{0. 9 2}$) at low energy consumption$\\boldsymbol{(} \\boldsymbol{E} \\boldsymbol{\\approx} \\mathbf{2 2 0}$) with solutions closer to the ideal frontier, effectively solving the multi-objective optimization problem of indoor drone inspection under energy constraints.",
+      "url": "https://doi.org/10.1109/iciics67880.2026.11483381",
+      "doi": "https://doi.org/10.1109/iciics67880.2026.11483381",
+      "source": "International Conference on Integrated Intelligence and Communication Systems (ICIICS)",
+      "indoor_evidence": [
+        "Indoor",
+        "Indoor",
+        "factory",
+        "indoor",
+        "indoor"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Related indoor application"
+    },
+    {
+      "title": "Research on Spatial Integration Design of Unmanned Aerial Vehicle Facilities in Future Communities under the Background of Low-Altitude Economy: Taking Hangzhou Cloud City as an Example",
+      "date": "2026-05-29",
+      "year": 2026,
+      "keywords": [
+        "unmanned aerial vehicles",
+        "low-altitude economy",
+        "future communities",
+        "spatial integration",
+        "drone delivery"
+      ],
+      "summary": "The rapid development of the low-altitude economy and the construction of future communities have created an urgent need for the spatial integration of drone facilities and residential buildings. Existing research mainly focuses on airspace management, industrial economics, and technical engineering, while research on the spatial integration of drone landing facilities from the perspective of architecture and urban planning is still lacking. This study proposes the concept of \"vertical logistics interface\" and constructs a typological framework of \"building-drone\" interface types such as rooftop, facade, and balcony. Based on the four-dimensional coupling analysis of \"drone type-facility-population-policy\", it establishes six design principles: technology adaptability, population friendliness, structural safety, spatial embedding, dual-use (normal and emergency), and intelligent interconnection. It proposes a \"2+N\" distributed network strategy to address the pain points of existing public take-off and landing fields, such as end-point gaps, land occupation, and functional isolation. Taking Hangzhou Yuncheng Hangteng Future Community as an example, the spatial integration design of two rooftop integrated hubs and N building micro-platforms was completed. The pioneering use of balcony retractable landing panels to achieve direct drone delivery indoors was achieved, constructing a three-dimensional integrated logistics network of \"underground-ground-low altitude\", providing a reference design idea for the construction of future communities in pilot cities of the low-altitude economy.",
+      "url": "https://doi.org/10.62051/ijsspa.v10n5.06",
+      "doi": "https://doi.org/10.62051/ijsspa.v10n5.06",
+      "source": "International Journal of Social Sciences and Public Administration",
+      "indoor_evidence": [
+        "indoors"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Related indoor application"
+    },
+    {
+      "title": "Vision - Based Indoor Localization of Nano Drones in Controlled Environment with its Applications",
+      "date": "2026-03-12",
+      "year": 2026,
+      "keywords": [
+        "indoor positioning",
+        "visual localization",
+        "monocular camera",
+        "PID control",
+        "GPS-denied navigation",
+        "path planning"
+      ],
+      "summary": "Navigating unmanned aerial vehicles in environments where GPS signals are unavailable poses a compelling and intricate challenge. This challenge is further heightened when dealing with Nano Aerial Vehicles (NAVs) due to their compact size, payload restrictions, and computational capabilities. This paper proposes an approach for localization using off-board computing, an off-board monocular camera, and modified open-source algorithms. The proposed method uses three parallel proportional-integral-derivative controllers on the off-board computer to provide velocity corrections via wireless communication, stabilizing the NAV in a custom-controlled environment. Featuring a 3.1cm localization error and a modest setup cost of 50 USD, this approach proves optimal for environments where cost considerations are paramount. It is especially well-suited for applications like teaching drone control in academic institutions, where the specified error margin is deemed acceptable. Various applications are designed to validate the proposed technique, such as landing the NAV on a moving ground vehicle, path planning in a 3D space, and localizing multi-NAVs. The created package is openly available at https://github.com/simmubhangu/eyantra_drone to foster research in this field.",
+      "url": "https://doi.org/10.65731/ama/2026-0001",
+      "doi": "https://doi.org/10.65731/ama/2026-0001",
+      "source": "Acta Mechanica et Automatica",
+      "indoor_evidence": [
+        "Indoor",
+        "indoor",
+        "GPS-denied"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Related indoor application"
+    },
+    {
+      "title": "High-Accuracy Indoor Positioning Using Deep Neural Networks Combining with Optimal Hyperparameters and Fault-Tolerant Mechanism",
+      "date": "2026-03-12",
+      "year": 2026,
+      "keywords": [
+        "indoor positioning",
+        "fingerprinting localization",
+        "deep convolutional neural networks",
+        "fault tolerance",
+        "Hyperband",
+        "simulated annealing",
+        "hyperparameter optimization",
+        "signal diversity",
+        "distance measurement error"
+      ],
+      "summary": "High-accuracy indoor positioning is essential for reliable wireless services and drone monitoring, yet the performance remains highly sensitive to access point (AP) failures. This paper proposes a fingerprinting-based localization framework utilizing Channel Impulse Response (CIR) features and a deep convolutional neural network (DCNN) to ensure robust positioning under both nominal and degraded operational conditions. Two scenarios are examined. In the first scenario, where all four APs operate normally, the influence of network depth and hyperparameter settings on localization accuracy is systematically evaluated. The network block count is progressively reduced and optimal hyperparameters are selected via the Hyperband algorithm, followed by parameter refinement through simulated annealing in a two-stage optimization strategy. Second, in single-AP failure conditions, a mitigation approach is employed wherein a single-input DCNN is retrained for each failure case, and its hyperparameters are independently optimized using Hyperband to compensate for reduced signal diversity. Experimental validation demonstrates that the proposed system achieves an average distance error (ADE) of 0.552 m under nominal conditions, outperforming existing methods. Under single-AP failure scenarios, the framework maintains strong positioning performance, with ADE ranging from 0.776 m to 1.019 m. These results confirm the effectiveness and resilience of the proposed DCNN architecture, highlighting its suitability for reliable indoor localization in realistic and fault-prone environments.",
+      "url": "https://doi.org/10.15837/ijccc.2026.2.7398",
+      "doi": "https://doi.org/10.15837/ijccc.2026.2.7398",
+      "source": "International Journal of Computers Communications & Control",
+      "indoor_evidence": [
+        "Indoor",
+        "indoor",
+        "indoor",
+        "indoor"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Related indoor application"
+    },
+    {
+      "title": "Intelligent drone-based framework for autonomous inventory data inspection",
+      "date": "2026-03-03",
+      "year": 2026,
+      "keywords": [
+        "unmanned aerial vehicles",
+        "barcode detection",
+        "barcode decoding",
+        "warehouse inventory management",
+        "object detection models",
+        "YOLO",
+        "Faster R-CNN",
+        "EfficientDet"
+      ],
+      "summary": "• A drone-based system for autonomous inventory inspection using deep learning (DL). • UAVs autonomously captured inventory images; DL models detected barcodes in images. • Achieved detection rates up to 100% and decoding accuracy between 81.3% and 98.6%. • The system shows strong applicability for industrial and commercial inventory tasks. This study introduces an innovative drone-based framework for autonomous inventory inspection, designed to address the inherent inefficiencies and limitations of conventional inventory management practices. The proposed system uniquely combines indoor drone navigation with advanced deep learning-based barcode detection and decoding, further enhanced by the creation of a manually annotated barcode dataset acquired directly from drone imagery in warehouse environments. In contrast to previous studies, which have typically examined these technological components in isolation, this research presents a comprehensive and unified approach that facilitates efficient, contactless, and dependable inventory data collection. State-of-the-art deep learning models, specifically EfficientDet, Faster R-CNN, and YOLO, are utilized to accurately identify and decode both one-dimensional and two-dimensional barcodes, thereby streamlining inventory identification and data acquisition processes. Experimental evaluations conducted under controlled warehouse conditions have demonstrated robust performance, achieving barcode detection rates of up to 100 percent, with a minimum of 74.1 percent, and decoding accuracy ranging from 81.3 percent to 98.6 percent. The primary contributions of this work include: (1) the development of the first unified framework that integrates indoor drone navigation with DL-based barcode reading in real-world settings, and (2) the creation of a new annotated barcode dataset tailored for warehouse environments. These results highlight the significant potential of this approach to transform inventory management practices and enable scalable, efficient, and autonomous operations for industrial and commercial applications.",
+      "url": "https://doi.org/10.1016/j.iswa.2026.200648",
+      "doi": "https://doi.org/10.1016/j.iswa.2026.200648",
+      "source": "Intelligent Systems with Applications",
+      "indoor_evidence": [
+        "indoor",
+        "warehouse",
+        "warehouse",
+        "indoor",
+        "warehouse",
+        "warehouse"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Directly relevant"
+    },
+    {
+      "title": "Learning on the Fly: Replay-Based Continual Object Perception for Indoor Drones",
+      "date": "2026-02-13",
+      "year": 2026,
+      "keywords": [
+        "continual learning",
+        "class-incremental learning",
+        "replay-based continual learning",
+        "catastrophic forgetting",
+        "indoor drones",
+        "unmanned aerial vehicles",
+        "object detection",
+        "experience replay",
+        "YOLOv11",
+        "edge deployment",
+        "Grad-CAM",
+        "temporal coherence"
+      ],
+      "summary": "Autonomous agents such as indoor drones must learn new object classes in real-time while limiting catastrophic forgetting, motivating Class-Incremental Learning (CIL). However, most unmanned aerial vehicle (UAV) datasets focus on outdoor scenes and offer limited temporally coherent indoor videos. We introduce an indoor dataset of $14,400$ frames capturing inter-drone and ground vehicle footage, annotated via a semi-automatic workflow with a $98.6\\%$ first-pass labeling agreement before final manual verification. Using this dataset, we benchmark 3 replay-based CIL strategies: Experience Replay (ER), Maximally Interfered Retrieval (MIR), and Forgetting-Aware Replay (FAR), using YOLOv11-nano as a resource-efficient detector for deployment-constrained UAV platforms. Under tight memory budgets ($5-10\\%$ replay), FAR performs better than the rest, achieving an average accuracy (ACC, $mAP_{50-95}$ across increments) of $82.96\\%$ with $5\\%$ replay. Gradient-weighted class activation mapping (Grad-CAM) analysis shows attention shifts across classes in mixed scenes, which is associated with reduced localization quality for drones. The experiments further demonstrate that replay-based continual learning can be effectively applied to edge aerial systems. Overall, this work contributes an indoor UAV video dataset with preserved temporal coherence and an evaluation of replay-based CIL under limited replay budgets. Project page: https://spacetime-vision-robotics-laboratory.github.io/learning-on-the-fly-cl",
+      "url": "https://doi.org/10.48550/arxiv.2602.13440",
+      "doi": "https://doi.org/10.48550/arxiv.2602.13440",
+      "source": "arXiv (Cornell University)",
+      "indoor_evidence": [
+        "Indoor",
+        "indoor",
+        "indoor",
+        "indoor",
+        "indoor",
+        "indoor"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Related indoor application"
+    },
+    {
+      "title": "Techno-economic analysis for smart hangar inspection operations through sensing and localisation at scale",
+      "date": "2025-12-22",
+      "year": 2025,
+      "keywords": [
+        "robot localization",
+        "GPS-denied environments",
+        "multipath effects",
+        "motion capture",
+        "ultra-wideband",
+        "ceiling-mounted camera",
+        "surface defect detection",
+        "asset monitoring",
+        "aircraft maintenance, repair and overhaul",
+        "techno-economic analysis"
+      ],
+      "summary": "Abstract The accuracy, robustness and affordability of localisation are fundamental to autonomous robotic inspection within aircraft maintenance, repair and overhaul (MRO) hangars. Hangars typically have high ceilings and are predominantly steel-framed structures with metal cladding. Because of this, they are regarded as GPS-denied environments, characterised by significant multipath effects and strict operational constraints, which together form a unique challenging setting. The lack of comparative techno-economic benchmarks for localisation technologies in such environments remains a critical gap. Addressing this, the paper presents the first techno-economic analysis that benchmarks motion capture (MoCap), ultra-wideband (UWB) and a ceiling-mounted camera (CMC) system across three operational scenarios: robot localisation, asset monitoring and surface defect detection within a single-bay hangar. A two-stage optimisation framework for camera selection and placement is introduced, which couples market-based camera-lens selection with an optimisation solver, producing camera layouts that minimise hardware while meeting accuracy and coverage targets. The consolidated blueprints provide quantification of the required equipment and its performance: 15 global-shutter GigE cameras are adequate for drone localisation, 9 cameras meet the requirements for on-bay monitoring and 49 high-resolution cameras facilitate defect mapping of the upper airframe surfaces for midsize defects. Across these scenarios, the study reports indicative performance and cost envelopes: a MoCap installation delivers submillimeter localisation at an estimated £190k per bay, UWB delivers centimetre-level tracking for around £49k and the proposed CMC system layouts achieve task-specific coverage with costs in the £9k–£77k range. The analysis equips MRO planners with an actionable method to balance accuracy, coverage and budget, demonstrating that an optimised CMC system can deliver robust and cost-effective sensing for next-generation smart hangars.",
+      "url": "https://doi.org/10.1017/aer.2025.10116",
+      "doi": "https://doi.org/10.1017/aer.2025.10116",
+      "source": "The Aeronautical Journal",
+      "indoor_evidence": [
+        "GPS-denied",
+        "GPS-denied"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Directly relevant"
+    },
+    {
+      "title": "Drone‐Based Application of Warehouse Logistics – A Case Study",
+      "date": "2025-10-31",
+      "year": 2025,
+      "keywords": [
+        "unmanned aerial vehicles",
+        "warehouse logistics",
+        "indoor drones",
+        "inventory management",
+        "e-commerce",
+        "optical navigation",
+        "payload capacity"
+      ],
+      "summary": "The logistics sector has seen great promise for drone technology. By 2027, this market is expected to grow by $29 billion, averaging 20% yearly growth. Particularly in logistics and warehousing, drones have applications. Thanks to recent technological advancements like optical navigation and sensors, drones can now be used indoors. Apart from the advancements in drone technology, another important factor contributing to the growth of warehouses is the worldwide e-commerce industry. Drones can be used, for example, in intra-logistics and automated inventory checks. The chapter offers a case study on drone-based applications of warehouse logistics. Three distinct areas of drone-based applications will be explored such as indoor intra-logistics, inventory management, and inspection & surveillance. Among all of these applications, the logistics sector can benefit greatly from drone utilization. For instance, they can move components from storage facilities to factory workshops. The ability of drones to fly along predefined courses and carry cargo holds good capability for applications indoors, including prompt tool delivery and lubricant to an area. However, there are significant intra-logistics limitations with regard to payload, gripping/placing motions, and navigation.",
+      "url": "https://doi.org/10.1002/9781394386451.ch14",
+      "doi": "https://doi.org/10.1002/9781394386451.ch14",
+      "source": "Wiley eBooks",
+      "indoor_evidence": [
+        "Warehouse",
+        "indoors",
+        "warehouse",
+        "indoor",
+        "factory",
+        "indoors",
+        "warehouse",
+        "indoor"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Directly relevant"
+    },
+    {
+      "title": "AGV-Drone Coordination for Autonomous Intralogistics Operation with the Use of Simulation-Optimization Framework",
+      "date": "2025-10-22",
+      "year": 2025,
+      "keywords": [
+        "automated guided vehicles",
+        "indoor drones",
+        "intralogistics",
+        "material handling",
+        "simulation-based optimization",
+        "discrete event simulation",
+        "travel time minimization",
+        "drone deployment",
+        "delivery strategy"
+      ],
+      "summary": "Automated Guided Vehicles (AGVs) are the standard material handling tool for intralogistics operations, providing ground-based mobility in the context of Industry 4.0. The concept of using indoor drones for intralogistics operations is new, and it can provide air-based mobility with a greater area of manipulation than AGVs. Integrating AGVs and drones in intralogistics can improve efficiency in material handling. However, determining the optimal delivery configurations and strategies for AGV-drone coordination remains challenging, particularly in minimizing system-level travel time. This study presents a simulation-optimization framework that utilizes a Discrete Event Simulation approach to evaluate configurations for AGV-drone systems, with a focus on key parameters such as drone deployment and coordination strategies for intralogistics. The simulation model utilizes the proportion of travel times to compare and select the best delivery strategies or configurations for different scenarios. The findings contribute to a broader understanding of AGV-drone systems, providing insights into implementing an automated AGV-drone coordination system in manufacturing and assembly environments for intralogistics operations.",
+      "url": "https://doi.org/10.36227/techrxiv.176115881.13265110/v1",
+      "doi": "https://doi.org/10.36227/techrxiv.176115881.13265110/v1",
+      "source": "OpenAlex",
+      "indoor_evidence": [
+        "indoor",
+        "indoor"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Related indoor application"
+    },
+    {
+      "title": "Indoor Quadcopter Localization Using Fuzzy-Sliding Mode Control for Robust Navigation",
+      "date": "2025-10-06",
+      "year": 2025,
+      "keywords": [
+        "fuzzy sliding mode control",
+        "unmanned aerial vehicles",
+        "LiDAR",
+        "chattering reduction",
+        "trajectory tracking",
+        "warehouse automation",
+        "GPS-denied navigation",
+        "UAV stabilization"
+      ],
+      "summary": "Growing demand for warehouse automation requires Unmanned Aerial Vehicles (UAVs), particularly quadcopters, to operate autonomously with a high level of precision and reliability. However, indoor localization poses unique challenges due to the absence of Global Positioning System (GPS) signals, making alternative sensors and robust control strategies essential. This study proposes an indoor UAV navigation system that integrates camera and LiDAR sensors with Fuzzy–Sliding Mode Control (Fuzzy-SMC) to enhance stability and reduce the chattering effects commonly associated with Sliding Mode Control. In the proposed method, the camera provides better accuracy for real-time position tracking compared to LiDAR, while fuzzy logic adaptively adjusts the Sliding Mode Control parameters, which serve as the main controller for stabilizing the quadcopter’s nonlinear dynamics. Research methodology includes mathematical modeling of the UAV quadcopter, the design of the Fuzzy-SMC controller, and simulation-based testing for trajectory tracking in indoor environments. Results show that the developed system achieves high accuracy, with error values ranging from 0 to 4.044%, remaining below the acceptable threshold of 5%. These findings demonstrate that integration of a camera with Fuzzy-SMC provides an effective and reliable solution for indoor quadcopter UAV navigation, while future research will focus on optimizing the fuzzy rule base and conducting hardware validation in real warehouse scenarios.",
+      "url": "https://doi.org/10.31763/ijrcs.v5i3.1941",
+      "doi": "https://doi.org/10.31763/ijrcs.v5i3.1941",
+      "source": "International Journal of Robotics and Control Systems",
+      "indoor_evidence": [
+        "Indoor",
+        "warehouse",
+        "indoor",
+        "indoor",
+        "indoor",
+        "indoor",
+        "warehouse",
+        "warehouse",
+        "GPS-denied"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Directly relevant"
+    },
+    {
+      "title": "A Lightweight Indoor Drone Navigation Framework for Inventory Applications",
+      "date": "2025-10-01",
+      "year": 2025,
+      "keywords": [
+        "AprilTag",
+        "fiducial markers",
+        "warehouse inventory management",
+        "QR code scanning",
+        "barcode scanning",
+        "pathfinding algorithms",
+        "multi-UAV coordination"
+      ],
+      "summary": "Fiducial markers have proven highly effective in guiding autonomous vehicles across various research domains, offering precise location and navigation cues. In this study, we explore their application in real-world warehouse inventory systems by integrating Fiducial Markers, specifically AprilTags, with path-finding algorithms to enhance drone navigation. Our system enables drones to autonomously traverse warehouse environments, scanning barcodes and QR codes on inventory items while navigating between rows and levels. The first phase of our experiment involved simulating a shelf-scanning process using a$\\mathbf{3} \\times 3$grid of QR codes, designed to test the drone's navigation and scanning abilities in a controlled environment. This phase successfully demonstrated the feasibility of using a drone to automate inventory management tasks. Future phases will involve simulating multiple shelves and ultimately deploying the system in a real warehouse, facing more complex challenges such as varying lighting conditions, larger scanning areas, and potential obstacles. Additionally, we plan to integrate multiple drones working in coordination to increase scalability and efficiency. Our preliminary results show significant potential for optimizing warehouse operations through faster, more accurate, and fully autonomous inventory management using drone technology.",
+      "url": "https://doi.org/10.1109/aixheart65685.2025.00010",
+      "doi": "https://doi.org/10.1109/aixheart65685.2025.00010",
+      "source": "Artificial Intelligence x Humanities, Education, and Art (AIxHEART)",
+      "indoor_evidence": [
+        "Indoor",
+        "warehouse",
+        "warehouse",
+        "warehouse",
+        "warehouse",
+        "warehouse"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Directly relevant"
+    },
+    {
+      "title": "Drone-Assisted Order Picking Problem: Adaptive Genetic Algorithm",
+      "date": "2025-09-04",
+      "year": 2025,
+      "keywords": [
+        "adaptive genetic algorithm",
+        "vehicle routing",
+        "mixed-integer linear programming",
+        "order batching",
+        "warehouse operations",
+        "sensitivity analysis"
+      ],
+      "summary": "This study tries to make some improvements in the order picking operations by offering a novel mathematical model and efficient solution algorithm. Accordingly, the order picking policies are examined to allow for picking more orders by reducing the collection time/distance of order pickers. Batching orders for the pick are included in the order picking process as it could enable the order picker to collect more orders. Since the most labor-intensive movement in the order picking function in a high-level shelf layout is the retrieval of products from upper shelves and placing them onto the collection vehicle in the picker-to-part system, the use of drones is preferred to eliminate this costly movement. Drones assist humans in the order picking process by retrieving products from upper levels, thus reducing the order picking time. Here, a Vehicle Routing Problem (VRP) is formulated to deal with drone routing which is then solved based on the Order Picking Problem (OPP) framework. Consequently, an integrated OPP involving both order pickers and drones is addressed and formulated using a Mixed-Integer Linear Programming (MILP) model. To cope with the complexity of the problem, an Adaptive Genetic Algorithm (AGA) is designed which is able to yield superior results compared to the classical Genetic Algorithm (GA). Finally, a sensitivity analysis is performed to assess the behavior of the model against real-world fluctuations. The main reason for this research is to speed up the order picking process in warehouses by taking advantage of the tools brought by the technology age. According to the research results, when the results of the drone-assisted order picking process are compared to the order picking process without drone support, an improvement of 29.68% is observed. The theoretical contribution of this work is that it initially mathematically defines the drone-aided OPP in the literature and proposes a solution with the help of the AGA. As a practical contribution, it provides a solution with the capacity to reduce operational costs by accelerating the order picking operation in warehouses and a practical optimization framework for logistics managers. In additio",
+      "url": "https://doi.org/10.3390/systems13090774",
+      "doi": "https://doi.org/10.3390/systems13090774",
+      "source": "Systems",
+      "indoor_evidence": [
+        "warehouse",
+        "warehouse"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Directly relevant"
+    },
+    {
+      "title": "Outdoor Warehouse Management: UAS-Driven Precision Tracking of Stacked Steel Bars",
+      "date": "2025-07-28",
+      "year": 2025,
+      "keywords": [
+        "unmanned aerial vehicles",
+        "product localization",
+        "QR code detection",
+        "relative positioning",
+        "inventory management",
+        "occlusion handling",
+        "illumination variation",
+        "logistics automation"
+      ],
+      "summary": "Accurately identifying the positions of products in outdoor environments-such as warehouses or industrial yards-presents unique challenges due to variable lighting, weather conditions, and the lack of fixed infrastructure. This work presents a vision-based drone system for product localization using QR code detection and relative positioning. The proposed system enables a UAV to autonomously scan an area, extract QR codes from captured video frames, and compute the spatial relationships between products using a trust-ability graph. Unlike traditional GPS- or RFID-based methods, our approach does not rely on external infrastructure, making it scalable and adaptable for outdoor and semi-structured environments. We demonstrate that the proposed algorithm achieves over 94% positioning accuracy in indoor settings and 80% in outdoor environments, even under occlusion and varying illumination. The key contributions of this work include: (1) a novel infrastructure-free method for product positioning based on relative spatial relationships, (2) the integration of trust-ability scoring to improve the reliability of detected positions, and (3) an extensive evaluation in real-world indoor and outdoor industrial scenarios. These results validate the potential of UAV-assisted inventory systems to enhance automation in logistics and warehouse management.",
+      "url": "https://doi.org/10.1007/s42979-025-04206-8",
+      "doi": "https://doi.org/10.1007/s42979-025-04206-8",
+      "source": "SN Computer Science",
+      "indoor_evidence": [
+        "Warehouse",
+        "indoor",
+        "indoor",
+        "warehouse"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Directly relevant"
+    },
+    {
+      "title": "Application of the Runge-Kutta fourth order integration in Coulomb counting method for indoor drone battery state of charge estimation",
+      "date": "2025-05-21",
+      "year": 2025,
+      "keywords": [
+        "state of charge estimation",
+        "Coulomb counting",
+        "fourth-order Runge-Kutta method",
+        "Euler method",
+        "numerical integration error",
+        "indoor drones",
+        "real-time battery monitoring",
+        "current profiles"
+      ],
+      "summary": "This thesis explores the impact of numerical integration methods on State of Charge (SOC) estimation accuracy for drone battery monitoring, specifically comparing the Euler single-step method and the Runge-Kutta 4th order (RK4) method. Contrary to expectations, results on a static dataset with mostly linear current trends showed that Euler exhibited lower cumulative error than RK4. This outcome is attributed to the simplicity of the data, which favored the less complex integration approach. Despite RK4’s theoretical advantages in handling non-linearities, its performance benefits did not materialize under the static test conditions. Furthermore, RK4 demonstrated approximately double the processing time of Euler, which may present challenges for real-time drone applications. However, RK4 remains a promising candidate for future implementation, particularly in real-time, curved, or dynamic current profiles where its higher-order accuracy is expected to reduce integration error over time. This work establishes a baseline for further exploration into live SOC estimation improvements and supports the case for targeted integration method selection based on the data profile and system constraints.",
+      "url": "https://doi.org/10.32920/29119364",
+      "doi": "https://doi.org/10.32920/29119364",
+      "source": "OpenAlex",
+      "indoor_evidence": [
+        "indoor",
+        "indoor"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Related indoor application"
+    },
+    {
+      "title": "Unscented Particle Filter for Visual-inertial Navigation using IMU and Landmark Measurements",
+      "date": "2025-05-01",
+      "year": 2025,
+      "keywords": [
+        "visual-inertial navigation",
+        "unscented particle filter",
+        "GPS-denied navigation",
+        "UAV pose estimation",
+        "stereo camera",
+        "nonlinear kinematics",
+        "Kalman filter comparison"
+      ],
+      "summary": "This paper introduces a geometric Quaternionbased Unscented Particle Filter for Visual-Inertial Navigation (QUPF-VIN) specifically designed for a vehicle operating with six degrees of freedom (6 DoF). The proposed QUPF-VIN technique is quaternion-based capturing the inherently nonlinear nature of true navigation kinematics. The filter fuses data from a lowcost inertial measurement unit (IMU) and landmark observations obtained via a vision sensor. The QUPF-VIN is implemented in discrete form to ensure seamless integration with onboard inertial sensing systems. Designed for robustness in GPS-denied environments, the proposed method has been validated through experiments with real-world dataset involving an unmanned aerial vehicle (UAV) equipped with a 6-axis IMU and a stereo camera, operating with 6 DoF. The numerical results demonstrate that the QUPF-VIN provides superior tracking accuracy compared to ground truth data. Additionally, a comparative analysis with a standard Kalman filter-based navigation technique further highlights the enhanced performance of the QUPF-VIN.",
+      "url": "https://doi.org/10.36227/techrxiv.174612877.77750997/v1",
+      "doi": "https://doi.org/10.36227/techrxiv.174612877.77750997/v1",
+      "source": "OpenAlex",
+      "indoor_evidence": [
+        "GPS-denied",
+        "GPS-denied"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Directly relevant"
+    },
+    {
+      "title": "5G-Enhanced Indoor UAV Localization and SLAM through Sensor Fusion",
+      "date": "2025-03-13",
+      "year": 2025,
+      "keywords": [
+        "sensor fusion",
+        "SLAM",
+        "error-state Kalman filter",
+        "pose graph optimization",
+        "GPS-denied navigation",
+        "visual-inertial SLAM",
+        "loop closure",
+        "base station density",
+        "indoor positioning"
+      ],
+      "summary": "Indoor localization and navigation for Unmanned Aerial Vehicles (UAVs) remain challenging due to GPS denial and the limitations of traditional visual-inertial systems. The emergence of 5G networks offers new opportunities for precise indoor positioning, but their integration with existing UAV navigation systems remains unexplored. This thesis systematically investigates the feasibility of integrating 5G Time-of-Arrival (TOA) measurements with advanced sensor fusion techniques to enhance indoor localization and SLAM (Simultaneous Localization and Mapping). Two approaches are proposed for localization: a real-time Error State Kalman Filter (ESKF) framework and a Pose Graph Optimization (PGO) method. The study leverages the EuRoC MAV dataset, augmented with simulated 5G TOA measurements, to evaluate system performance across diverse indoor scenarios and 5G base station densities. Using just IMU and TOA measurements as a minimal sensor setup, both proposed methods demonstrate significant improvements in pose estimation accuracy and drift reduction, with the PGO-based approach achieving superior results, reaching accuracies up to 13 cm with five base stations. A unified SLAM framework is developed that incorporates 5G TOA measurements alongside visual-inertial data, providing global localization capabilities and resolving scale ambiguity in monocular configurations. For local SLAM, the system operates effectively even with unknown base station positions and intermittent connectivity patterns, demonstrating an average 4.40% improvement in local accuracy while maintaining reliable scale estimation. Furthermore, TOA integration serves as an effective alternative to loop closure, improving accuracy by up to 29.6% in scenarios where traditional loop closure is unavailable. Comparative analysis with state-of-the-art approaches confirms the robustness of the proposed methods even under relaxed operational constraints. This research bridges the gap between visual-inertial and 5G radio-frequency-based approaches, establishing realistic baselines for understanding the practical impact of 5G technology on robotic localization and navigation in complex indoor environments.",
+      "url": "https://openalex.org/W7110585586",
+      "doi": null,
+      "source": "Open Repository and Bibliography (University of Luxembourg)",
+      "indoor_evidence": [
+        "Indoor",
+        "Indoor",
+        "indoor",
+        "indoor",
+        "indoor",
+        "indoor",
+        "GPS-denied",
+        "indoor"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Related indoor application"
+    },
+    {
+      "title": "UAV navigation for serving Flexible Manufacturing Systems",
+      "date": "2025-03-05",
+      "year": 2025,
+      "keywords": [
+        "unmanned aerial vehicles",
+        "flexible manufacturing systems",
+        "ultra-wideband positioning",
+        "indoor navigation",
+        "obstacle-rich environments",
+        "material flow",
+        "autonomous drones",
+        "collision avoidance",
+        "indoor communication",
+        "smart factory",
+        "GPS-denied navigation"
+      ],
+      "summary": "This thesis investigates the deployment of Unmanned Aerial Vehicles (UAVs) to support Flexible Manufacturing Systems (FMS) by addressing the challenges of indoor navigation in dynamic, obstacle-rich environments.With a specific focus on Ultra-Wideband (UWB) technology, the research explores how UAVs can be integrated into manufacturing setups to perform key tasks such as transporting materials, tools, and parts autonomously.Given the limitations of GPS in indoor environments, UWB is examined as a robust solution for achieving high-precision positioning, essential for safe and efficient UAV operations.Through detailed system design, simulation, and real-world testing, the study evaluates the performance of UWB-based drone navigation in terms of accuracy, reliability, and operational efficiency.In addition, various operational challenges, such as collision avoidance and communication within an indoor space, are addressed through advanced scheduling and control systems.The findings demonstrate the potential of UWB to enhance the agility and scalability of manufacturing systems, making UAVs an integral component of future smart factories.",
+      "url": "https://doi.org/10.26240/heal.ntua.28902",
+      "doi": "https://doi.org/10.26240/heal.ntua.28902",
+      "source": "DSpace - NTUA (National Technical University of Athens)",
+      "indoor_evidence": [
+        "indoor",
+        "indoor",
+        "indoor",
+        "indoor",
+        "indoor",
+        "factory",
+        "GPS-denied"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Related indoor application"
+    },
+    {
+      "title": "Harnessing Meta-Reinforcement Learning for Enhanced Tracking in Geofencing Systems",
+      "date": "2025-01-01",
+      "year": 2025,
+      "keywords": [
+        "geofencing",
+        "meta-reinforcement learning",
+        "5G small cells",
+        "indoor positioning",
+        "tracking accuracy",
+        "meta-training",
+        "generalization to new environments",
+        "access control"
+      ],
+      "summary": "Geofencing technologies have become pivotal in creating virtual boundaries for both real and virtual environments, offering a secure means to control and monitor designated areas. They are now considered essential tools for defining and controlling boundaries across various applications, from aviation safety in drone management to access control within mixed reality platforms like the metaverse. Effective geofencing relies heavily on precise tracking capabilities, a critical component for maintaining the integrity and functionality of these systems. Leveraging the advantages of 5G technology, including its large bandwidth and extensive accessibility, presents a promising solution to enhance geofencing performance. In this paper, we introduce MetaFence: Meta-Reinforcement Learning for Geofencing Enhancement, a novel approach for precise geofencing utilizing indoor 5G small cells, termed “5G Points”, which are optimally deployed using a meta-reinforcement learning (meta-RL) framework. Our proposed meta-RL method addresses the NP-hard problem of determining an optimal placement of 5G Points to minimize spatial geometry-induced errors. Moreover, the meta-training approach enables the learned policy to quickly adapt to diverse new environments. We devised a comprehensive test campaign to evaluate the performance of MetaFence. Our results demonstrate that this strategic placement significantly improves tracking accuracy compared to traditional methods. Furthermore, we show that the meta-training strategy enables the learned policy to generalize effectively and perform efficiently when faced with new environments.",
+      "url": "https://doi.org/10.1109/ojcoms.2025.3531318",
+      "doi": "https://doi.org/10.1109/ojcoms.2025.3531318",
+      "source": "IEEE Open Journal of the Communications Society",
+      "indoor_evidence": [
+        "indoor",
+        "indoor"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Directly relevant"
+    },
+    {
+      "title": "Global SLAM Using 5G ToA Integration: Performance Analysis with Unknown Base Stations and Loop Closure Alternatives",
+      "date": "2024-12-16",
+      "year": 2024,
+      "keywords": [
+        "ORB-SLAM3",
+        "global localization",
+        "inertial measurements",
+        "monocular SLAM",
+        "indoor positioning"
+      ],
+      "summary": "This paper presents a novel approach that integrates 5G Time of Arrival (ToA) measurements into ORB-SLAM3 to enable global localization and enhance mapping capabilities for indoor drone navigation. We extend ORB-SLAM3's optimization pipeline to jointly process ToA data from 5G base stations alongside visual and inertial measurements while estimating system biases. This integration transforms the inherently local SLAM estimates into globally referenced trajectories and effectively resolves scale ambiguity in monocular configurations. Our method is evaluated using both Aerolab indoor datasets with RGB-D cameras and the EuRoC MAV benchmark, complemented by simulated 5G ToA measurements at 28 GHz and 78 GHz frequencies using MATLAB and QuaDRiGa. Extensive experiments across multiple SLAM configurations demonstrate that ToA integration enables consistent global positioning across all modes while maintaining local accuracy. For monocular configurations, ToA integration successfully resolves scale ambiguity and improves consistency. We further investigate scenarios with unknown base station positions and demonstrate that ToA measurements can effectively serve as an alternative to loop closure for drift correction. We also analyze how different geometric arrangements of base stations impact SLAM performance. Comparative analysis with state-of-the-art methods, including UWB-VO, confirms our approach's robustness even with lower measurement frequencies and sequential base station operation. The results validate that 5G ToA integration provides substantial benefits for global SLAM applications, particularly in challenging indoor environments where accurate positioning is critical.",
+      "url": "https://doi.org/10.48550/arxiv.2412.12406",
+      "doi": "https://doi.org/10.48550/arxiv.2412.12406",
+      "source": "arXiv (Cornell University)",
+      "indoor_evidence": [
+        "indoor",
+        "indoor",
+        "indoor",
+        "indoor"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Related indoor application"
+    },
+    {
+      "title": "Signal Strength-Based Alien Drone Detection and Containment in Indoor UAV Swarm Simulations",
+      "date": "2024-09-23",
+      "year": 2024,
+      "keywords": [
+        "drone detection",
+        "UAV swarms",
+        "received signal strength indicator",
+        "autonomous swarms",
+        "swarm intelligence",
+        "threat detection",
+        "simulation framework",
+        "warehouse security"
+      ],
+      "summary": "A Novel simulation framework using self-governing drones is used to locate and reduce unauthorized drones in interior environments. The recommended method uses Received Signal Strength Indicator (RSSI) to identify an alien agent drone, which has different signal characteristics than the approved swarm of UAVs. Real-time threat detection is possible with this technology. After detecting the drone, the swarm organizes itself to encircle and besiege it for 10 seconds, making it inert, before the swarm returns to its original formation. This unique solution uses RSSI to quickly identify and mitigate enclosed area concerns. It provides a reliable and effective indoor drone security solution. The simulation results show that the approach works in critical environments such as warehouses, laboratories, and other secure indoor facilities. This study advances unmanned aerial system (UAS) autonomous swarm intelligence and security procedures.",
+      "url": "https://doi.org/10.62762/tis.2024.807714",
+      "doi": "https://doi.org/10.62762/tis.2024.807714",
+      "source": "ICCK Transactions on Intelligent Systematics",
+      "indoor_evidence": [
+        "Indoor",
+        "indoor",
+        "indoor",
+        "warehouse"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Directly relevant"
+    },
+    {
+      "title": "Development of Unmanned Aerial Vehicle Navigation and Warehouse Inventory System Based on Reinforcement Learning",
+      "date": "2024-05-28",
+      "year": 2024,
+      "keywords": [
+        "unmanned aerial vehicles",
+        "indoor positioning",
+        "warehouse inventory",
+        "path planning",
+        "obstacle avoidance",
+        "visual-inertial odometry",
+        "ultra-wideband",
+        "SLAM",
+        "RTAB-Map",
+        "actor-critic",
+        "proximal policy optimization",
+        "UAV navigation",
+        "barcode detection"
+      ],
+      "summary": "In this paper, we present the exploration of indoor positioning technologies for UAVs, as well as navigation techniques for path planning and obstacle avoidance. The objective was to perform warehouse inventory tasks, using a drone to search for barcodes or markers to identify objects. For the indoor positioning techniques, we employed visual-inertial odometry (VIO), ultra-wideband (UWB), AprilTag fiducial markers, and simultaneous localization and mapping (SLAM). These algorithms included global positioning, local positioning, and pre-mapping positioning, comparing the merits and drawbacks of various techniques and trajectories. For UAV navigation, we combined the SLAM-based RTAB-map indoor mapping and navigation path planning of the ROS for indoor environments. This system enabled precise drone positioning indoors and utilized global and local path planners to generate flight paths that avoided dynamic, static, unknown, and known obstacles, demonstrating high practicality and feasibility. To achieve warehouse inventory inspection, a reinforcement learning approach was proposed, recognizing markers by adjusting the UAV’s viewpoint. We addressed several of the main problems in inventory management, including efficiently planning of paths, while ensuring a certain detection rate. Two reinforcement learning techniques, AC (actor–critic) and PPO (proximal policy optimization), were implemented based on AprilTag identification. Testing was performed in both simulated and real-world environments, and the effectiveness of the proposed method was validated.",
+      "url": "https://doi.org/10.3390/drones8060220",
+      "doi": "https://doi.org/10.3390/drones8060220",
+      "source": "Drones",
+      "indoor_evidence": [
+        "Warehouse",
+        "indoor",
+        "warehouse",
+        "indoor",
+        "indoor",
+        "indoor",
+        "indoors",
+        "warehouse",
+        "indoor",
+        "warehouse"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Directly relevant"
+    },
+    {
+      "title": "Exploring Intended Functions of Indoor Flying Robots Interacting With Humans in Proximity",
+      "date": "2024-05-11",
+      "year": 2024,
+      "keywords": [
+        "indoor drones",
+        "flying robots",
+        "human-robot interaction",
+        "perceived usefulness",
+        "perceived annoyance",
+        "family environment",
+        "privacy",
+        "transparency",
+        "personalization",
+        "robot design"
+      ],
+      "summary": "What will people experience when drones become common in home environments? How will their functions and distances impact human experiences? To explore the potential usage of indoor drones, we conducted a mixed-methods study (N=60) on the reported perceptions of a small flying robot. We employed a factorial experimental design, involving four intended drone functions (camera, education, pet, unknown) at two distances (near, far). Our findings suggest that intended functions significantly influence participants’ perceptions. Among the functions examined, participants found the camera useful but annoying, and the pet useless but pleasant. The education emerged as the most favored function, while the unknown function was the least preferred one. Based on these findings, we discuss implications for designing positive interactions between humans and indoor drones, considering aspects such as context, transparency, privacy, technical factors, and personalization.",
+      "url": "https://doi.org/10.1145/3613904.3642791",
+      "doi": "https://doi.org/10.1145/3613904.3642791",
+      "source": "CHI Conference on Human Factors in Computing Systems",
+      "indoor_evidence": [
+        "Indoor",
+        "indoor",
+        "indoor",
+        "indoor"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Related indoor application"
+    },
+    {
+      "title": "OPTILOD: Optimal Beacon Placement for High-Accuracy Indoor Localization of Drones",
+      "date": "2024-03-14",
+      "year": 2024,
+      "keywords": [
+        "beacon placement",
+        "indoor positioning",
+        "unmanned aerial vehicles",
+        "UAV positioning",
+        "ranging error",
+        "mixed integer programming",
+        "evolutionary algorithms",
+        "NP-hard optimization",
+        "GPS alternative",
+        "autonomous navigation"
+      ],
+      "summary": "For many applications, drones are required to operate entirely or partially autonomously. In order to fly completely or partially on their own, drones need to access location services for navigation commands. While using the Global Positioning System (GPS) is an obvious choice, GPS is not always available, can be spoofed or jammed, and is highly error-prone for indoor and underground environments. The ranging method using beacons is one of the most popular methods for localization, especially for indoor environments. In general, the localization error in this class is due to two factors: the ranging error, and the error induced by the relative geometry between the beacons and the target object to be localized. This paper proposes OPTILOD (Optimal Beacon Placement for High-Accuracy Indoor Localization of Drones), an optimization algorithm for the optimal placement of beacons deployed in three-dimensional indoor environments. OPTILOD leverages advances in evolutionary algorithms to compute the minimum number of beacons and their optimal placement, thereby minimizing the localization error. These problems belong to the Mixed Integer Programming (MIP) class and are both considered NP-hard. Despite this, OPTILOD can provide multiple optimal beacon configurations that minimize the localization error and the number of deployed beacons concurrently and efficiently.",
+      "url": "https://doi.org/10.3390/s24061865",
+      "doi": "https://doi.org/10.3390/s24061865",
+      "source": "Sensors",
+      "indoor_evidence": [
+        "Indoor",
+        "indoor",
+        "indoor",
+        "Indoor",
+        "indoor",
+        "indoor"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Related indoor application"
+    },
+    {
+      "title": "YOLO-IHD: Improved Real-Time Human Detection System for Indoor Drones",
+      "date": "2024-01-31",
+      "year": 2024,
+      "keywords": [
+        "human detection",
+        "indoor drones",
+        "unmanned aerial vehicles",
+        "YOLO",
+        "real-time object detection",
+        "attention mechanism",
+        "indoor surveillance",
+        "search and rescue",
+        "disaster response"
+      ],
+      "summary": "In the field of unmanned systems, the combination of artificial intelligence with self-operating functionalities is becoming increasingly important. This study introduces a new method for autonomously detecting humans in indoor environments using unmanned aerial vehicles, utilizing the advanced techniques of a deep learning framework commonly known as \"You Only Look Once\" (YOLO). The key contribution of this research is the development of a new model (YOLO-IHD), specifically designed for human detection in indoor using drones. This model is created using a unique dataset gathered from aerial vehicle footage in various indoor environments. It significantly improves the accuracy of detecting people in these complex environments. The model achieves a notable advancement in autonomous monitoring and search-and-rescue operations, highlighting its importance for tasks that require precise human detection. The improved performance of the new model is due to its optimized convolutional layers and an attention mechanism that process complex visual data from indoor environments. This results in more dependable operation in critical situations like disaster response and indoor rescue missions. Moreover, when combined with an accelerating processing library, the model shows enhanced real-time detection capabilities and operates effectively in a real-world environment with a custom designed indoor drone. This research lays the groundwork for future enhancements designed to significantly increase the model's accuracy and the reliability of indoor human detection in real-time drone applications.",
+      "url": "https://doi.org/10.3390/s24030922",
+      "doi": "https://doi.org/10.3390/s24030922",
+      "source": "Sensors",
+      "indoor_evidence": [
+        "Indoor",
+        "indoor",
+        "indoor",
+        "indoor",
+        "indoor",
+        "indoor",
+        "indoor",
+        "indoor",
+        "indoor",
+        "indoor"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Related indoor application"
+    },
+    {
+      "title": "Jamming Detection in Low-BER Mobile Indoor Scenarios via Deep Learning",
+      "date": "2023-12-15",
+      "year": 2023,
+      "keywords": [
+        "jamming detection",
+        "low bit error rate",
+        "indoor wireless communication",
+        "unmanned aerial vehicles",
+        "sparse autoencoders",
+        "IQ samples",
+        "grayscale images",
+        "link layer security",
+        "bloodhounds"
+      ],
+      "summary": "The current state of the art on jamming detection relies on link-layer metrics. A few examples are the bit-error rate (BER), the packet delivery ratio, the throughput, and the signal-to-noise ratio (SNR). As a result, these techniques can only detect jamming ex-post, i.e., once the attack has already taken down the communication link. These solutions are unfit for mobile devices, e.g., drones, which might lose the connection to the remote controller, being unable to predict the attack. Our solution is rooted in the idea that a drone unknowingly flying toward a jammed area is experiencing an increasing effect of the jamming, e.g., in terms of BER and SNR. Therefore, drones might use the abovementioned phenomenon to detect jamming before the increase of the BER and the decrease of the SNR completely disrupt the communication link. Such an approach would allow drones and their pilots to make informed decisions and maintain complete control of navigation, enhancing security and safety. This article proposes Bloodhound+, a solution for jamming detection on mobile devices in low-BER regimes. Our approach analyzes raw physical-layer information (I-Q samples) acquired from the wireless channel. We assemble this information into grayscale images and use sparse autoencoders to detect image anomalies caused by jamming attacks. To test our solution against a broad set of configurations, we acquired a large data set of indoor measurements using multiple hardware, jamming strategies, and communication parameters. Our results indicate that Bloodhound+ can detect indoor jamming up to 20 m from the jamming source at the minimum available relative jamming power, with a minimum accuracy of 99.7%. Our solution is also robust to various sampling rates adopted by the jammer and to the type of signal used for jamming.",
+      "url": "https://doi.org/10.1109/jiot.2023.3343611",
+      "doi": "https://doi.org/10.1109/jiot.2023.3343611",
+      "source": "IEEE Internet of Things Journal",
+      "indoor_evidence": [
+        "Indoor",
+        "indoor",
+        "indoor",
+        "indoor"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Related indoor application"
+    },
+    {
+      "title": "Autonomous Cargo Drone with Collision Avoidance and Warehouse Management IoT",
+      "date": "2023-12-11",
+      "year": 2023,
+      "keywords": [
+        "indoor drones",
+        "collision avoidance",
+        "warehouse management",
+        "indoor positioning",
+        "Wi-Fi positioning",
+        "RFID",
+        "obstacle detection sensors",
+        "drone-to-drone communication",
+        "RF transceiver",
+        "inventory tracking"
+      ],
+      "summary": "The manual movement of goods within warehouses and keeping track of them can be tedious, labor-intensive, and errable, resulting in increased costs, and reduced productivity. Additionally, this can pose safety risks to workers. The development of an autonomous indoor drone system with Wi-Fi-based indoor positioning and RFID-based delivery capabilities is proposed in this paper. One of the primary technologies employed in the system is indoor positioning based on WiFi, where it utilizes signals from WiFi access points to ascertain the drones’ positions within the warehouse. To achieve autonomous flight, the drones will be equipped with obstacle detection sensors. The drones will also use RF transceivers to communicate with each other to avoid collision and immediately shift their trajectories. RFID technology will be used for Warehouse management such as keeping track of Stocks and moving the goods to its destination in warehouse. Incorporating drones can enhance operational efficiency, lower labor expenses, and bolster safety standards within the warehouse.",
+      "url": "https://doi.org/10.1109/icacrs58579.2023.10405121",
+      "doi": "https://doi.org/10.1109/icacrs58579.2023.10405121",
+      "source": "International Conference on Automation, Computing and Renewable Systems (ICACRS)",
+      "indoor_evidence": [
+        "Warehouse",
+        "indoor",
+        "indoor",
+        "indoor",
+        "warehouse",
+        "Warehouse",
+        "warehouse",
+        "warehouse",
+        "indoor",
+        "warehouse",
+        "indoor"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Directly relevant"
+    },
+    {
+      "title": "Indoor Drone Localization and Tracking Based on Acoustic Inertial Measurement",
+      "date": "2023-11-28",
+      "year": 2023,
+      "keywords": [
+        "drone tracking",
+        "microphone array",
+        "non-line-of-sight",
+        "GPS-denied environments",
+        "Kalman filter",
+        "distributed microphone arrays"
+      ],
+      "summary": "We present Acoustic Inertial Measurement (AIM), a one-of-a-kind technique for indoor drone localization and tracking. Indoor drone localization and tracking are arguably a crucial, yet unsolved challenge: in GPS-denied environments, existing approaches enjoy limited applicability, especially in Non-Line of Sight (NLoS), require extensive environment instrumentation, or demand considerable hardware/software changes on drones. In contrast, AIM exploits the acoustic characteristics of the drones to estimate their location and derive their motion, even in NLoS settings. We tame location estimation errors using a dedicated Kalman filter and the Interquartile Range rule (IQR) and demonstrate that AIM can support indoor spaces with arbitrary ranges and layouts. We implement AIM using an off-the-shelf microphone array and evaluate its performance with a commercial drone under varied settings. Results indicate that the mean localization error of AIM is 46% lower than that of commercial UWB-based systems in a complex 10m×10m indoor scenario, where state-of-the-art infrared systems would not even work because of NLoS situations. When distributed microphone arrays are deployed, the mean error can be reduced to less than 0.5m in a 20m range, and even support spaces with arbitrary ranges and layouts.",
+      "url": "https://doi.org/10.1109/tmc.2023.3335860",
+      "doi": "https://doi.org/10.1109/tmc.2023.3335860",
+      "source": "IEEE Transactions on Mobile Computing",
+      "indoor_evidence": [
+        "Indoor",
+        "indoor",
+        "Indoor",
+        "GPS-denied",
+        "indoor",
+        "indoor",
+        "GPS-denied"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Directly relevant"
+    },
+    {
+      "title": "Fusion localization for indoor airplane inspection using visual inertial odometry and ultrasonic RTLS",
+      "date": "2023-10-23",
+      "year": 2023,
+      "keywords": [
+        "indoor positioning",
+        "visual-inertial odometry",
+        "sensor fusion",
+        "drone inspection",
+        "aircraft hangar",
+        "outlier removal",
+        "non-line-of-sight",
+        "graph optimization",
+        "trilateration",
+        "visual odometry"
+      ],
+      "summary": "In this paper, the fusion localization system for the visual inertial odometry (VIO) and ultrasonic real-time localization system (RTLS) for indoor airplane inspection using drones is proposed. In a hangar environment, either trilateration-based RTLS or vision-based localization shows disadvantages and neither can be used alone. In this research, we design a configuration of VIO suitable for hangar environment and outlier filter on ultrasonic RTLS for non-line of sight situations, so that both can be fused using graph optimization. The proposed solution can provide more accurate localization than the visual odometry-only system as well as continue estimating positions in the absence of RTLS data. Localization and real-time performance of the proposed algorithm are evaluated through experimentation in a hangar and a flight test in an outdoor space.",
+      "url": "https://doi.org/10.1038/s41598-023-43425-y",
+      "doi": "https://doi.org/10.1038/s41598-023-43425-y",
+      "source": "Scientific Reports",
+      "indoor_evidence": [
+        "indoor",
+        "indoor",
+        "indoor"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Related indoor application"
+    },
+    {
+      "title": "3D Self-Localization of Drones using a Single Millimeter-Wave Anchor",
+      "date": "2023-10-12",
+      "year": 2023,
+      "keywords": [
+        "millimeter-wave radar",
+        "GPS-denied navigation",
+        "indoor and outdoor localization",
+        "IMU fusion",
+        "trajectory tracking",
+        "autonomous drones"
+      ],
+      "summary": "We present the design, implementation, and evaluation of MiFly, a self-localization system for autonomous drones that works across indoor and outdoor environments, including low-visibility, dark, and GPS-denied settings. MiFly performs 6DoF self-localization by leveraging a single millimeter-wave (mmWave) anchor in its vicinity - even if that anchor is visually occluded. MmWave signals are used in radar and 5G systems and can operate in the dark and through occlusions. MiFly introduces a new mmWave anchor design and mounts light-weight high-resolution mmWave radars on a drone. By jointly designing the localization algorithms and the novel low-power mmWave anchor hardware (including its polarization and modulation), the drone is capable of high-speed 3D localization. Furthermore, by intelligently fusing the location estimates from its mmWave radars and its IMUs, it can accurately and robustly track its 6DoF trajectory. We implemented and evaluated MiFly on a DJI drone. We demonstrate a median localization error of 7cm and a 90th percentile less than 15cm, even when the anchor is fully occluded (visually) from the drone.",
+      "url": "https://doi.org/10.48550/arxiv.2310.08778",
+      "doi": "https://doi.org/10.48550/arxiv.2310.08778",
+      "source": "arXiv (Cornell University)",
+      "indoor_evidence": [
+        "indoor",
+        "GPS-denied",
+        "GPS-denied",
+        "indoor"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Directly relevant"
+    },
+    {
+      "title": "Stockpile Volume Estimation in Open and Confined Environments: A Review",
+      "date": "2023-08-20",
+      "year": 2023,
+      "keywords": [
+        "UAV photogrammetry",
+        "airborne laser scanning",
+        "terrestrial laser scanning",
+        "GNSS",
+        "indoor mapping",
+        "occlusion",
+        "solid-state LiDAR",
+        "indoor positioning",
+        "confined spaces",
+        "satellite imagery"
+      ],
+      "summary": "This paper offers a comprehensive review of traditional and advanced stockpile volume-estimation techniques employed within both outdoor and indoor confined spaces, whether that be a terrestrial- or an aerial-based technique. Traditional methods, such as manual measurement and satellite imagery, exhibit limitations in handling irregular or constantly changing stockpiles. On the other hand, more advanced techniques, such as global navigation satellite system (GNSS), terrestrial laser scanning (TLS), drone photogrammetry, and airborne light detection and ranging (LiDAR), have emerged to address these challenges, providing enhanced accuracy and efficiency. Terrestrial techniques relying on GNSS, TLS, and LiDAR offer accurate solutions; however, to minimize or eliminate occlusions, surveyors must access geometrically constrained places, representing a serious safety hazard. With the speedy rise of drone technologies, it was not unexpected that they found their way to the stockpile volume-estimation application, offering advantages such as ease of use, speed, safety, occlusion elimination, and acceptable accuracy compared to current standard methods, such as TLS and GNSS. For outdoor drone missions, image-based approaches, like drone photogrammetry, surpass airborne LiDAR in cost-effectiveness, ease of deployment, and color information, whereas airborne LiDAR becomes advantageous when mapping complex terrain with vegetation cover, mapping during low-light or dusty conditions, and/or detecting small or narrow objects. Indoor missions, on the other hand, face challenges such as low lighting, obstacles, dust, and limited space. For such applications, most studies applied LiDAR sensors mounted on tripods or integrated on rail platforms, whereas very few utilized drone solutions. In fact, the choice of the most suitable technique/approach depends on factors such as site complexity, required accuracy, project cost, and safety considerations. However, this review puts more focus on the potential of drones for stockpile volume estimation in confined spaces, and explores emerging technologies, such as solid-state LiDAR and indoor localization systems, which hold significant p",
+      "url": "https://doi.org/10.3390/drones7080537",
+      "doi": "https://doi.org/10.3390/drones7080537",
+      "source": "Drones",
+      "indoor_evidence": [
+        "indoor",
+        "Indoor",
+        "indoor",
+        "indoor",
+        "indoor"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Related indoor application"
+    },
+    {
+      "title": "Unmanned Aerial Vehicle (UAV) path planning and control assisted by Augmented Reality (AR): the case of indoor drones",
+      "date": "2023-07-13",
+      "year": 2023,
+      "keywords": [
+        "unmanned aerial vehicles",
+        "indoor drones",
+        "path planning",
+        "augmented reality",
+        "remote drone control",
+        "indoor navigation",
+        "remote monitoring",
+        "Internet of Things",
+        "Industry 5.0"
+      ],
+      "summary": "Following the recent advances in Industry 4.0 and the upcoming Industry 5.0, the use of multiple UAVs for indoor tasks has risen, particularly in real-time remote monitoring, wireless coverage, and remote sensing. As a result, UAVs can be viewed as proactive problem solvers and can support Internet of Things (IoT) platforms by collecting and monitoring data cost-effectively and efficiently, leading to better decision-making. Moreover, sophisticated drone operations require specialised software and data processing abilities. However, the utilisation of drones has been mainly focused on outdoor environments, thus creating a literature gap regarding indoor navigation and operation. Therefore, the design and development of a method for remote planning and control of drones based on the utilisation of AR is presented in this paper. The proposed method is based on the utilisation of drones for remote monitoring. The suggested approach involves engineers designing a sequence of actions and transmitting them wirelessly to the drone, eliminating the need for human intervention. Thus, the proposed method contributes towards enabling engineers visualise the drone path with the use of Augmented Reality and provides the flexibility of adding multiple way points. The applicability of the developed framework is tested in a laboratory-based machine shop.",
+      "url": "https://doi.org/10.1080/00207543.2023.2232470",
+      "doi": "https://doi.org/10.1080/00207543.2023.2232470",
+      "source": "International Journal of Production Research",
+      "indoor_evidence": [
+        "indoor",
+        "indoor",
+        "indoor",
+        "indoor",
+        "indoor"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Related indoor application"
+    },
+    {
+      "title": "A Pose Estimation Method for Indoor UAV Based on Binocular Vision",
+      "date": "2023-06-23",
+      "year": 2023,
+      "keywords": [
+        "pose estimation",
+        "attitude estimation",
+        "binocular vision",
+        "feature point matching",
+        "depth information",
+        "UAV navigation",
+        "warehouse logistics",
+        "low-cost sensors"
+      ],
+      "summary": "As a means of fast transportation of goods, indoor unmanned aerial vehicles (UAVs) are limited in their widespread use in express logistics warehouses due to the complexity of their attitude estimation and navigation positioning, as well as the relatively expensive sensors they carry. This paper focuses on the attitude estimation of indoor UAVs and explores a solution based on binocular vision for indoor UAV attitude estimation. This solution utilizes the feature points obtained by the camera to calculate the change in the null space vector of the feature points during the attitude change process. Meanwhile, the binocular camera can obtain depth information to achieve accurate indoor UAV attitude estimation. The experimental results demonstrate that the proposed solution can achieve more accurate attitude estimation and provide effective attitude correction information for subsequent indoor drone navigation and positioning methods.",
+      "url": "https://doi.org/10.1109/isas59543.2023.10164370",
+      "doi": "https://doi.org/10.1109/isas59543.2023.10164370",
+      "source": "International Symposium on Autonomous Systems (ISAS)",
+      "indoor_evidence": [
+        "Indoor",
+        "indoor",
+        "indoor",
+        "indoor",
+        "indoor",
+        "indoor",
+        "warehouse"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Directly relevant"
+    },
+    {
+      "title": "iDROP: Robust Localization for Indoor Navigation of Drones With Optimized Beacon Placement",
+      "date": "2023-05-25",
+      "year": 2023,
+      "keywords": [
+        "drone localization",
+        "indoor navigation",
+        "GPS-denied environments",
+        "3D localization",
+        "multipath fading",
+        "ranging error",
+        "autonomous drones"
+      ],
+      "summary": "Drones in many applications need the ability to fly fully or partially autonomously to accomplish their mission. To allow these fully/partially autonomous flights, first, the drone needs to be able to locate itself constantly. Then, the navigation command signal would be generated and passed on to the controller unit of the drone. In this article, we propose a localization scheme for drones called robust localization for indoor navigation of drones with optimized beacon placement (iDROP) that is specifically devised for GPS-denied environments (e.g., indoor spaces). Instead of GPS signals, iDROP relies on speaker-generated ultrasonic acoustic signals to enable a drone to estimate its location. In general, localization error is caused by two factors: the ranging error and the error induced by relative geometry between the transmitters and the receiver. iDROP mitigates these two types of errors and provides a high-precision 3-D localization scheme for drones. iDROP employs a waveform that is robust against multipath fading. Moreover, placing beacons in optimal locations reduces the localization error induced by the relative geometry between the transmitters and the receiver.",
+      "url": "https://doi.org/10.1109/jiot.2023.3280084",
+      "doi": "https://doi.org/10.1109/jiot.2023.3280084",
+      "source": "IEEE Internet of Things Journal",
+      "indoor_evidence": [
+        "Indoor",
+        "indoor",
+        "GPS-denied",
+        "indoor",
+        "indoor",
+        "GPS-denied"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Related indoor application"
+    },
+    {
+      "title": "Accelerating Use of Drones and Robotics in Post-Pandemic Project Supply Chain",
+      "date": "2023-05-09",
+      "year": 2023,
+      "keywords": [
+        "construction robotics",
+        "construction supply chain management",
+        "Internet of Things",
+        "artificial intelligence",
+        "inventory tracking",
+        "warehouse management",
+        "material traceability",
+        "building inspection",
+        "optimization model",
+        "construction automation"
+      ],
+      "summary": "The global COVID-19 pandemic forced the construction industry to a standstill. In the wake of the pandemic, this sector must be prepared to make bold, innovative moves to prepare for the future. Over the past few years, the use of drones and robotics has expanded with many commercial uses, including in the construction industry. Drone-driven automation has an enormous impact in improving productivity and reducing cost and schedule overruns. The use of drones, along with the application of Internet of Things (IoT) and robotics, can make a significant impact on the supply chain and improve inventory accuracy, leading to faster and more cost-effective building projects. This paper will propose and statistically substantiate an optimization model for supply chain management through the accelerated use of drones and Artificial Intelligence (AI) in the post-pandemic era. The use of smart devices and IoT will allow warehouse managers to have real-time visibility of the location and inventory tracking, as well as enabling warehouse workers to access information without being physically present. Cutting-edge drone technology can quickly perform inspections to make inventory control more economical and efficient. While they are certainly not a perfect fit for every building surveillance task, drones have many advantages for probing buildings in search of leaks, performing aerial surveys, and dealing with security issues more cost-effectively than manual procedures, thereby leading to improved communication and collaboration between different stakeholders. This paper includes a real-life case study and dynamic mathematical model to demonstrate how this approach results in a project’s materials becoming visible, traceable, and easily tracked from end to end.",
+      "url": "https://doi.org/10.3390/drones7050313",
+      "doi": "https://doi.org/10.3390/drones7050313",
+      "source": "Drones",
+      "indoor_evidence": [
+        "warehouse",
+        "warehouse",
+        "warehouse"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Directly relevant"
+    },
+    {
+      "title": "Implementation and Critical Factors of Unmanned Aerial Vehicle (UAV) in Warehouse Management: A Systematic Literature Review",
+      "date": "2023-01-23",
+      "year": 2023,
+      "keywords": [
+        "unmanned aerial vehicles",
+        "warehouse management",
+        "warehouse automation",
+        "order picking",
+        "path planning",
+        "navigation algorithms",
+        "localization",
+        "battery power",
+        "payload",
+        "scheduling"
+      ],
+      "summary": "Unmanned aerial vehicles (UAVs) have proven to be a key solution for nearly automated or smart warehouse operations, enabling receiving, picking, storage, and shipping processes to be timely and more efficient. However, there is a relative scarcity of review studies specifically on UAV-based warehouse management. Research knowledge and insights on UAV applications in this field are also limited and could not sufficiently or practically support decision-making on commercial utilization. To leverage the potential applications and current situation of UAVs, this study provides a systematic literature review (SLR) on UAV adoption in warehouse management. SLR approach was critically conducted to identify, select, assess, and summarize findings, mainly on the two descriptive research questions; what are the past applications of UAV, and what are critical factors affecting UAV adoption in warehouse management? Five key critical factors and 13 sub-factors could be observed. The results revealed that hardware (e.g., payloads, battery power, and sensors) and software factors (e.g., scheduling, path planning, localization, and navigation algorithms) are the most influential factors impacting drone adoption in warehouse management. The managerial implications of our research findings that guide decision-makers or practitioners to effectively employ UAV-based warehouse management in good practice are also discussed.",
+      "url": "https://doi.org/10.3390/drones7020080",
+      "doi": "https://doi.org/10.3390/drones7020080",
+      "source": "Drones",
+      "indoor_evidence": [
+        "Warehouse",
+        "warehouse",
+        "warehouse",
+        "warehouse",
+        "warehouse",
+        "warehouse",
+        "warehouse",
+        "warehouse",
+        "warehouse"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Directly relevant"
+    },
+    {
+      "title": "FMCW Radar Sensing for Indoor Drones Using Learned Representations",
+      "date": "2023-01-06",
+      "year": 2023,
+      "keywords": [
+        "FMCW radar",
+        "indoor drones",
+        "unsupervised learning",
+        "learned representations",
+        "radar target detection",
+        "multi-task learning",
+        "low-dimensional representation",
+        "radar dataset",
+        "obstacle detection"
+      ],
+      "summary": "Frequency-modulated continuous-wave (FMCW) radar is a promising sensor technology for indoor drones as it provides range, angular as well as Doppler-velocity information about obstacles in the environment. Recently, deep learning approaches have been proposed for processing FMCW data, outperforming traditional detection techniques on range-Doppler or range-azimuth maps. However, these techniques come at a cost; for each novel task a deep neural network architecture has to be trained on high-dimensional input data, stressing both data bandwidth and processing budget. In this paper, we investigate unsupervised learning techniques that generate low-dimensional representations from FMCW radar data, and evaluate to what extent these representations can be reused for multiple downstream tasks. To this end, we introduce a novel dataset of raw radar ADC data recorded from a radar mounted on a flying drone platform in an indoor environment, together with ground truth detection targets. We show with real radar data that, utilizing our learned representations, we match the performance of conventional radar processing techniques and that our model can be trained on different input modalities such as raw ADC samples of only two consecutively transmitted chirps.",
+      "url": "https://doi.org/10.48550/arxiv.2301.02451",
+      "doi": "https://doi.org/10.48550/arxiv.2301.02451",
+      "source": "arXiv (Cornell University)",
+      "indoor_evidence": [
+        "Indoor",
+        "indoor",
+        "indoor",
+        "indoor"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Related indoor application"
+    },
+    {
+      "title": "UAV technology to support management decision-making in the industry",
+      "date": "2023-01-01",
+      "year": 2023,
+      "keywords": [
+        "unmanned aerial vehicles",
+        "UAV technology",
+        "decision support",
+        "management decision-making",
+        "industrial applications",
+        "production process management",
+        "small factories",
+        "Internet of Things",
+        "5G",
+        "artificial intelligence"
+      ],
+      "summary": "Purpose: The aim of this article is to define and approach the concept of UAV and its use in industry and decision support in business. Design/methodology/approach: The methodology of the article consisted of comprehensive analysis of the theoretical concept of UAV technology within the case study framework. Findings: Result of this analysis provides an evaluation of the state for implementation as support for decision-making and management of companies that will use this trend in the future. Practical implications: With the progress of science and technology, the individual components of this technology have gradually evolved and become more and more accessible. UAV technology represents great potential in the production processes of factories or smaller factories. Social implications: UAV (Unnamed Aerial Vehicles) technology has been evolving for decades. However, its civilian use and industrial use have only come in recent years. UAV technology represents great potential in manufacturing processes, support other technological trends, such as IoT, 5G, AI, Factory 4.0. Originality/value: The presented paper provide not only practical but also theoretical conclusion to management of production processes of factories or smaller factories. Keywords: management, decision making, UAV technology. Category of the paper: Research paper. Case study.",
+      "url": "https://doi.org/10.29119/1641-3466.2022.166.22",
+      "doi": "https://doi.org/10.29119/1641-3466.2022.166.22",
+      "source": "Scientific Papers of Silesian University of Technology Organization and Management Series",
+      "indoor_evidence": [
+        "Factory"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Related indoor application"
+    },
+    {
+      "title": "Warehouse Drone: Indoor Positioning and Product Counter with Virtual Fiducial Markers",
+      "date": "2022-12-21",
+      "year": 2022,
+      "keywords": [
+        "indoor positioning",
+        "ArUco markers",
+        "product counting",
+        "drone localization",
+        "supervised learning",
+        "AdaBoost",
+        "regression analysis",
+        "warehouse logistics",
+        "simulation environment"
+      ],
+      "summary": "The use of robotic systems in logistics has increased the importance of precise positioning, especially in warehouses. The paper presents a system that uses virtual fiducial markers to accurately predict the position of a drone in a warehouse and count items on the rack. A warehouse scenario is created in the simulation environment to determine the success rate of positioning. A total of 27 racks are lined up in the warehouse and in the center of the space, and a 6 × 6 ArUco type fiducial marker is used on each rack. The position of the vehicle is predicted by supervised learning. The inputs are the virtual fiducial marker features from the drone. The output data are the cartesian position and yaw angle. All input and output data required for supervised learning in the simulation environment were collected along different random routes. An image processing algorithm was prepared by making use of fiducial markers to perform rack counting after the positioning process. Among the regression algorithms used, the AdaBoost algorithm showed the highest performance. The R2 values obtained in the position prediction were 0.991 for the x-axis, 0.976 for the y-axis, 0.979 for the z-axis, and 0.816 for the γ-angle rotation.",
+      "url": "https://doi.org/10.3390/drones7010003",
+      "doi": "https://doi.org/10.3390/drones7010003",
+      "source": "Drones",
+      "indoor_evidence": [
+        "Warehouse",
+        "Indoor",
+        "warehouse",
+        "warehouse",
+        "warehouse",
+        "indoor",
+        "warehouse"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Directly relevant"
+    },
+    {
+      "title": "A Path Planning Model with a Genetic Algorithm for Stock Inventory Using a Swarm of Drones",
+      "date": "2022-11-19",
+      "year": 2022,
+      "keywords": [
+        "UAV swarms",
+        "warehouse inventory control",
+        "path planning",
+        "genetic algorithm",
+        "QR code recognition"
+      ],
+      "summary": "In this paper, a mathematical model and solution for performing the inventory tasks of a multi-user, mixed warehouse in which neither satellite positioning nor other IT solutions can be used was presented. After reviewing the literature on road planning and the use of drones in warehouses, a method is presented that can be used to control drones that can be moved in all directions for imaging and transmission. The proposed method consists of three main steps. As a first step, we provide the mathematical model and solution method needed to determine the (optimal execution time) access routes required for processing the compartments of the warehouses. This is an initial step before starting the inventory. This considers the structure of the warehouse, its features, the number of drones, and the parameters of the drones. In the second step, based on the routes obtained in the first step, the real-time movement of the drones was controlled during processing, including camera movement and image recording. The third step is post-processing, i.e., processing the images for QR code identification, interpreting the QR code, and recognizing empty compartments for inventory control. A major advantage for users of the solution method is that the result can be achieved automatically without an external orientation device, relying solely on its own movement and the organization of a pre-planned route. The proposed model and solution method are suitable not only for inventory control, but also for solving other problems matching the model.",
+      "url": "https://doi.org/10.3390/drones6110364",
+      "doi": "https://doi.org/10.3390/drones6110364",
+      "source": "Drones",
+      "indoor_evidence": [
+        "warehouse",
+        "warehouse",
+        "warehouse"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Directly relevant"
+    },
+    {
+      "title": "Learning to Encode Vision on the Fly in Unknown Environments: A Continual Learning SLAM Approach for Drones",
+      "date": "2022-11-08",
+      "year": 2022,
+      "keywords": [
+        "continual learning",
+        "unmanned aerial vehicles",
+        "dictionary learning",
+        "sparse coding",
+        "online adaptation",
+        "unknown environments",
+        "warehouse navigation",
+        "autonomous navigation"
+      ],
+      "summary": "Learning to safely navigate in unknown environ-ments is an important task for autonomous drones used in surveillance and rescue operations. In recent years, a number of learning-based Simultaneous Localisation and Mapping (SLAM) systems relying on deep neural networks (DNNs) have been proposed for applications where conventional feature descriptors do not perform well. However, such learning-based SLAM systems rely on DNN feature encoders trained offline in typical deep learning settings. This makes them less suited for drones deployed in environments unseen during training, where continual adaptation is paramount. In this paper, we present a new method for learning to SLAM on the fly in unknown environments, by modulating a low-complexity Dictionary Learning and Sparse Coding (DLSC) pipeline with a newly proposed Quadratic Bayesian Surprise (QBS) factor. We experimentally validate our approach with data collected by a drone in a challenging warehouse scenario, where the high number of ambiguous scenes makes visual disambiguation hard.",
+      "url": "https://doi.org/10.1109/ssrr56537.2022.10018713",
+      "doi": "https://doi.org/10.1109/ssrr56537.2022.10018713",
+      "source": "IEEE International Symposium on Safety, Security, and Rescue Robotics (SSRR)",
+      "indoor_evidence": [
+        "warehouse",
+        "warehouse"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Directly relevant"
+    },
+    {
+      "title": "DeepTelecom: A Differentiable Multimodal Framework for Channel Twinning in Dynamic Heterogeneous Wireless Environments",
+      "date": "2026-10-10",
+      "year": 2026,
+      "keywords": [
+        "differentiable ray tracing",
+        "reconfigurable intelligent surface",
+        "Level of Detail 3",
+        "micro-Doppler signatures",
+        "Sionna",
+        "millimeter-wave propagation",
+        "UAV positioning",
+        "material calibration"
+      ],
+      "summary": "Large-scale multimodal data are a key enabler for integrating large generative artificial intelligence models into wireless networks. However, existing wireless datasets offer limited support for heterogeneous environments, particularly in terms of reusable high-fidelity scenes, scalable differentiable ray tracing, and synchronized multimodal data. These limitations are more pronounced in mobile and aerial scenarios with time-varying environments and channels. To address these limitations, we propose DeepTelecom, a material-aware, high-fidelity multimodal channel dataset and reproducible generation framework for networks involving unmanned aerial vehicles (UAVs) and reconfigurable intelligent surfaces. DeepTelecom refines coarse indoor/outdoor reconstructions and uses a large language model to map segmented surfaces to frequency-dependent electromagnetic parameters, yielding material-aware Level of Detail 3 digital twins. Then, a differentiable GPU-accelerated Sionna ray tracer simulates propagation across the sub-6 GHz/millimeter-wave/sub-terahertz bands, and specifically captures rotor-induced micro-Doppler signatures of stationary or moving UAVs at different pitch angles and translational velocities. The framework synchronously produces channel tensors, coverage maps, transmission videos, multi-view images, and weather-conditioned renderings, and supports differentiable material calibration from sparse channel anchors. The released dataset contains 10 material-aware indoor/outdoor scenes and 50,000 synchronized UAV samples; the framework supports scalable generation of additional data for user-defined scenes and system configurations. In 3D UAV localization, DeepTelecom reduces the 90th-percentile error from 31.05 m to 2.43 m compared with schemes considering only channel state information, demonstrating its significance for artificial-intelligence-enabled wireless systems.",
+      "url": "https://doi.org/10.48550/arxiv.2610.14545",
+      "doi": "https://doi.org/10.48550/arxiv.2610.14545",
+      "source": "arXiv (Cornell University)",
+      "indoor_evidence": [
+        "indoor",
+        "indoor"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Related indoor application"
+    },
+    {
+      "title": "Improved 3D Gaussian splatting integrating VGGT and LiDAR: Application in visual relocalization for UAV inspection of large aircraft",
+      "date": "2026-09-01",
+      "year": 2026,
+      "keywords": [
+        "3D Gaussian Splatting",
+        "visual relocalization",
+        "UAV inspection",
+        "Segment Anything Model",
+        "low-rank adaptation",
+        "point cloud registration",
+        "pose estimation",
+        "image matching",
+        "coarse-to-fine localization",
+        "Roma",
+        "structural similarity index",
+        "PSNR",
+        "industrial inspection"
+      ],
+      "summary": "For high-precision unmanned aerial vehicle (UAV) visual relocalization in large-scale aircraft inspection, this paper proposes an improved 3DGS method integrating visual geometry grounded transformer (VGGT) with LiDAR and designs a coarse-to-fine two-stage image matching strategy to tackle the challenge. First, the low-rank adaptation technique is adopted to fine-tune the segment anything model (SAM3), and a dedicated dataset with refined aircraft structural features is constructed to achieve high-precision foreground segmentation of aircraft targets, which eliminates environmental interference for 3D mapping. Second, point clouds generated by VGGT are registered and fused with LiDAR point clouds, providing 3DGS with initialized data possessing real physical scales. Meanwhile, a smooth L1 depth loss is introduced to build a joint photometric–geometric optimization framework, so as to enhance the geometric consistency of the model. Finally, the pose estimation problem is converted into an image similarity matching problem. Coarse localization is realized through sparse sampling on multi-layer concentric hemispheres combined with dense matching via RoMa, while precise localization is completed by fusing feature distance, structural similarity index measure, and peak signal-to-noise ratio. Experimental results show that the improved SAM3 segmentation model achieves superior performance. The proposed improved 3DGS outperforms mainstream methods, including the original 3DGS, in rendering metrics and training efficiency. In addition, the presented pose estimation method achieves higher localization accuracy than HLoc, NeRF-Loc, and other comparative approaches in both indoor and outdoor scenarios. This method ensures high-precision and real-time mapping and localization, provides an effective scheme for aviation UAV intelligent inspection, and broadens the application of 3DGS in industrial automation.",
+      "url": "https://doi.org/10.1063/5.0342109",
+      "doi": "https://doi.org/10.1063/5.0342109",
+      "source": "AIP Advances",
+      "indoor_evidence": [
+        "indoor"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Related indoor application"
+    },
+    {
+      "title": "Dynamic truck UAV location inventory routing for postdisaster humanitarian logistics",
+      "date": "2026-09-11",
+      "year": 2026,
+      "keywords": [
+        "unmanned aerial vehicles",
+        "last-mile delivery",
+        "demand surge",
+        "facility disruption",
+        "earthquake response",
+        "mixed-integer linear programming"
+      ],
+      "summary": "Purpose This study aims to develop and evaluate a dynamic, multi-item, multiperiod location–inventory–routing model for postdisaster relief that jointly determines day-by-day distribution center (DC) activation under an exogenous availability calendar, inventory buffering, truck line-haul replenishment, unmanned aerial vehicle (UAV) last-mile service and inter-DC UAV redeployment. This study also benchmarks flexible and restricted operating policies; examines sensitivity to demand surges, UAV speed, sortie capacity, holding cost and road detours; and evaluates rolling-horizon reoptimization under progressively revealed demand, facility and UAV-availability disruptions. Design/methodology/approach The author formulates a mixed-integer linear program on a time-expanded two-echelon truck–DC–UAV network. Using an earthquake-response benchmark, the baseline (BS) policy is compared with cross-dock-only, always-open, static-open and no-redeployment variants. Sensitivity analyses vary demand surges, UAV speed, daily sortie limits, inventory-holding costs and road-detour factors. A separate six-day rolling-horizon experiment compares ORACLE, ROLLING and nonadaptive execution across four structured disruption classes, with 30 replications per class, to evaluate adaptive performance under progressively released information. Findings The flexible BS consistently achieves the lowest cost; under demand surges from 2× to 10×, total cost rises from 8,233 to 18,541. Most speed-related savings occur between 40 and 60 km/h, while the main sortie-capacity gains occur around 4–6 sorties per UAV per day in this benchmark. BS remains least costly across road-detour factors from 1.0 to 4.0. In rolling-horizon tests, ROLLING closely matches ORACLE’s total cost and planned-network/emergency-supply split, although both rely substantially on emergency/external supply under deliberately severe disruptions. Originality/value This study integrates four features rarely considered together in humanitarian logistics: time-varying DC usability, an explicit multiperiod horizon, hybrid truck–UAV two-echelon distribution and interperiod UAV redeployment while also incorporating multi-item inventory ",
+      "url": "https://doi.org/10.1108/jhlscm-10-2025-0201",
+      "doi": "https://doi.org/10.1108/jhlscm-10-2025-0201",
+      "source": "Journal of Humanitarian Logistics and Supply Chain Management",
+      "indoor_evidence": [
+        "distribution center"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Directly relevant"
+    },
+    {
+      "title": "Drone-Enabled Practices in Modern Warehouse Management: A Comprehensive Review",
+      "date": "2026-03-09",
+      "year": 2026,
+      "keywords": [
+        "unmanned aerial vehicles",
+        "warehouse management",
+        "inventory management",
+        "order fulfillment",
+        "multi-UAV systems",
+        "intralogistics",
+        "goods transportation",
+        "warehouse layout optimization",
+        "dynamic environments",
+        "artificial intelligence",
+        "Internet of Things"
+      ],
+      "summary": "The advent of drone technology has led to groundbreaking advancements across various industries, including warehousing operations. In recent years, warehouse drones have garnered significant attention due to their potential to revolutionize traditional inventory management and order fulfillment processes. This paper presents a comprehensive review that synthesizes findings from more than 120 research papers on drone-enabled practices in warehouses. The review systematically considers multiple parameters, including drone function (inventory counting, mapping, surveillance, inspection, and intralogistics support), robot platforms used (UAV, UAV-AGV), deployment architecture (single and multi-drone system), validation approach (real-time and simulation), technology and methodology used (modern electronic devices, AI, and IOT), and environmental context (dynamic and static). Furthermore, the paper explores the diverse applications of warehouse drones in inventory management, maintenance and inspection, picking and packaging, goods transportation, security and surveillance, and warehouse layout optimization. The review highlights that most studies still rely on single-UAV systems tested mainly in simulations, with only a few real-time demonstrations of fully autonomous performance inside real warehouses. Although multi-drone approaches are emerging to improve scalability, they continue to struggle with coordination and safety. Research remains largely focused on static environments, with dynamic warehouse conditions receiving far less attention despite their practical importance. The findings of the review are presented with the tabulated results and a comparative table to provide a better understanding of the review work, which helps to identify the existing literature gap. The review presents its findings through clear tables and comparisons, making it easier to understand existing studies and pinpoint the gaps in the current literature.",
+      "url": "https://doi.org/10.3390/drones10030189",
+      "doi": "https://doi.org/10.3390/drones10030189",
+      "source": "Drones",
+      "indoor_evidence": [
+        "Warehouse",
+        "warehouse",
+        "warehouse",
+        "warehouse",
+        "warehouse",
+        "warehouse",
+        "warehouse"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Directly relevant"
+    },
+    {
+      "title": "MODELING EVALUATION FRAMEWORK FOR ROBOTICS AND DIGITAL TWIN SIMULATION PLATFORMS WITH AN UNREAL ENGINE 5 WAREHOUSE CASE STUDY",
+      "date": "2026-02-02",
+      "year": 2026,
+      "keywords": [
+        "digital twin",
+        "robot simulation",
+        "simulation benchmarking",
+        "Unreal Engine 5",
+        "warehouse logistics",
+        "autonomous mobile robots",
+        "UAV inspection",
+        "teleoperation",
+        "human-robot interaction",
+        "virtual reality",
+        "Gazebo",
+        "NVIDIA Isaac Sim",
+        "CoppeliaSim",
+        "Webots",
+        "real-time factor"
+      ],
+      "summary": "Digital twins and high-fidelity simulators are becoming central to the design, testing, and operation of modern robotic systems in industry, logistics, and human–robot interaction. However, existing comparative studies typically focus on a single robot type, task, or simulator, and rarely consider digital–twin–specific aspects, such as telemetry pipelines, operator interfaces, or cloud connectivity. This article proposes a unified evaluation framework for robotics-oriented digital twin platforms. It applies it across five representative use cases: (i) small UAV inspection, (ii) an industrial hand-robot cell, (iii) a warehouse logistics cell with autonomous mobile robots (AMRs), (iv) HCI/VR-based teleoperation of a mobile manipulator, and (v) a general indoor patrol and docking scenario.The framework standardises inputs (robot and environment profiles, task definitions, digital-twin data contracts) and outputs (physics/task metrics, performance metrics, and DT metrics) and explicitly encodes task complexity via structured phases and control steps per episode. It is implemented on several widely used robotics simulators (Gazebo/gz-sim, Webots, NVIDIA Isaac Sim, CoppeliaSim) and on an Unreal Engine 5 (UE5)–based stack that combines Datasmith asset import, Chaos Physics, Blueprints/Control Rig, and UMG/VR interfaces.As a detailed case study, we instantiate the warehouse logistics use case as a UE5-based digital twin and report quantitative results on order throughput, path lengths, real-time factor, frame times, telemetry bandwidth, and UI-to-actuation latency, along with observed bottlenecks such as Blueprint CPU overhead and visual-load–induced slowdowns. Across all platforms and use cases, the results highlight trade-offs between physical fidelity, scalability, interaction richness, and DT responsiveness, and lead to practical guidelines for selecting and composing simulation and digital-twin stacks for UAV, manipulation, logistics, and HCI-centric applications. The paper concludes with a discussion of limitations, including the simplification of physics and hardware dependence, and outlines future steps toward sim-to-real correlation and automated benchmarking.",
+      "url": "https://doi.org/10.31548/itees.2025.02.045",
+      "doi": "https://doi.org/10.31548/itees.2025.02.045",
+      "source": "Information technologies in economics and environmental sciences",
+      "indoor_evidence": [
+        "WAREHOUSE",
+        "warehouse",
+        "indoor",
+        "warehouse",
+        "warehouse"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Directly relevant"
+    }
+  ]
 }

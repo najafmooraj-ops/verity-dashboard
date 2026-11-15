@@ -1,0 +1,193 @@
+{
+  "method_note": "Historical deployment examples are a curated sample, not a census of all warehouse drone activity. Status and geography reflect the cited source at publication.",
+  "timeline": [
+    {
+      "year": 2015,
+      "type": "research",
+      "title": "Early logistics experimentation",
+      "body": "A Flemish logistics-sector initiative launched a study with KU Leuven and industry partners to test drone applications, including indoor and outdoor inventory management at the Port of Antwerp.",
+      "source": "PwC / VIL drone study",
+      "url": "https://www.pwc.be/en/documents/20180518-drone-study.pdf"
+    },
+    {
+      "year": 2016,
+      "type": "deployment",
+      "title": "Commercial warehouse inventory use cases documented",
+      "body": "The ETH Zurich warehouse review lists PINC with Kenco Logistics in the US and Hardis Group with FM Logistics in France as commercial, in-use inventory-management applications. Walmart also publicly demonstrated a warehouse inventory drone in June 2016; the company described it as an early test.",
+      "source": "ETH Zurich (2019); Reuters (2016)",
+      "url": "https://ethz.ch/content/dam/ethz/special-interest/mtec/pom-dam/documents/Drones%20in%20warehouse%20opeations_POM%20whitepaper%202019_Final.pdf"
+    },
+    {
+      "year": 2017,
+      "type": "deployment",
+      "title": "More logistics pilots and deployments emerge",
+      "body": "The ETH Zurich review records warehouse inventory applications involving GEODIS in France, Rigterink Logistik in Germany, and Bolloré Logistics in Singapore. It also lists an Audi intralogistics prototype in Germany.",
+      "source": "ETH Zurich (2019)",
+      "url": "https://ethz.ch/content/dam/ethz/special-interest/mtec/pom-dam/documents/Drones%20in%20warehouse%20opeations_POM%20whitepaper%202019_Final.pdf"
+    },
+    {
+      "year": 2018,
+      "type": "pilot",
+      "title": "IKEA warehouse stock-taking pilots",
+      "body": "IKEA-related pilots included Aeriu in Budapest, Hungary, and a local employee-led drone trial in Bangkok, Thailand. The ETH review also records other experimental indoor logistics and inspection cases.",
+      "source": "Maghazei et al. (2022); ETH Zurich (2019)",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/joom.1196"
+    },
+    {
+      "year": 2019,
+      "type": "research",
+      "title": "First broad warehouse-use-case review",
+      "body": "ETH Zurich's white paper identified 12 indoor warehouse drone use cases across inventory management, intralogistics, and inspection/surveillance. It noted that inventory management had the strongest evidence, while public evidence for inspection deployments remained limited.",
+      "source": "ETH Zurich (2019)",
+      "url": "https://ethz.ch/content/dam/ethz/special-interest/mtec/pom-dam/documents/Drones%20in%20warehouse%20opeations_POM%20whitepaper%202019_Final.pdf"
+    },
+    {
+      "year": 2020,
+      "type": "pilot",
+      "title": "IKEA moves from local pilots toward adoption",
+      "body": "Following pilots with different providers, IKEA managers chose to continue testing and begin implementing drone-based inventory solutions in warehouse operations from 2020.",
+      "source": "Maghazei et al. (2022)",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/joom.1196"
+    },
+    {
+      "year": 2021,
+      "type": "deployment",
+      "title": "Verity drones roll out in IKEA Switzerland",
+      "body": "The IKEA case study reports adoption across five warehouse stores and one distribution center by December 2021. The first Verity drone flight at IKEA took place in Switzerland.",
+      "source": "Maghazei et al. (2022); Ingka Group (2024)",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1002/joom.1196"
+    },
+    {
+      "year": 2023,
+      "type": "scale",
+      "title": "IKEA reaches 100 autonomous drones",
+      "body": "A March 2023 report described 100 autonomous drones performing stock inventory across 16 IKEA locations in seven European countries.",
+      "source": "Robotics & Automation (23 Mar 2023)",
+      "url": "https://www.roboticsandautomationmagazine.co.uk/news/drones/ikea-deploys-autonomous-drones-across-european-stores-for-stock-inventory.html"
+    },
+    {
+      "year": 2024,
+      "type": "scale",
+      "title": "IKEA reports 250+ drones across 73 locations",
+      "body": "Ingka Group reported more than 250 drones operating across 73 locations in nine countries. It also described plans to explore unit-load and rack-inspection functionality; this is a development direction, not confirmation that rack inspection was already deployed at scale.",
+      "source": "Ingka Group (16 Aug 2024)",
+      "url": "https://www.ingka.com/newsroom/ikea-is-elevating-human-ai-powered-drone-collaboration/"
+    }
+  ],
+  "deployment_cases": [
+    {
+      "year": 2016,
+      "partner": "PINC",
+      "operator": "Kenco Logistics",
+      "country": "United States",
+      "industry": "Third-party logistics",
+      "application": "Inventory management",
+      "status": "In use"
+    },
+    {
+      "year": 2016,
+      "partner": "Hardis Group / eyesee",
+      "operator": "FM Logistics",
+      "country": "France",
+      "industry": "Third-party logistics",
+      "application": "Inventory management",
+      "status": "In use"
+    },
+    {
+      "year": 2018,
+      "partner": "Aeriu",
+      "operator": "IKEA Soroksár",
+      "country": "Hungary",
+      "industry": "Retail",
+      "application": "Inventory management",
+      "status": "Experimental"
+    },
+    {
+      "year": 2018,
+      "partner": "DroneScan",
+      "operator": "LF Logistics",
+      "country": "South Africa",
+      "industry": "Third-party logistics",
+      "application": "Inventory management",
+      "status": "Experimental"
+    },
+    {
+      "year": 2017,
+      "partner": "DeltaDrone",
+      "operator": "GEODIS",
+      "country": "France",
+      "industry": "Third-party logistics",
+      "application": "Inventory management",
+      "status": "Experimental"
+    },
+    {
+      "year": 2017,
+      "partner": "InventAIRy",
+      "operator": "Rigterink Logistik",
+      "country": "Germany",
+      "industry": "Third-party logistics",
+      "application": "Inventory management",
+      "status": "In use"
+    },
+    {
+      "year": 2017,
+      "partner": "Infinium Robotics",
+      "operator": "Bolloré Logistics",
+      "country": "Singapore",
+      "industry": "Third-party logistics",
+      "application": "Inventory management",
+      "status": "In use"
+    },
+    {
+      "year": 2015,
+      "partner": "Ascending Technologies / Intel",
+      "operator": "Audi",
+      "country": "Germany",
+      "industry": "Automotive",
+      "application": "Intralogistics",
+      "status": "Future / prototype"
+    },
+    {
+      "year": 2016,
+      "partner": "Not specified",
+      "operator": "Fraunhofer IML",
+      "country": "Germany",
+      "industry": "Research / logistics",
+      "application": "Intralogistics",
+      "status": "Future / prototype"
+    },
+    {
+      "year": 2017,
+      "partner": "Not specified",
+      "operator": "Walmart",
+      "country": "United States",
+      "industry": "Retail",
+      "application": "Intralogistics",
+      "status": "Patent / future"
+    },
+    {
+      "year": 2018,
+      "partner": "Not specified",
+      "operator": "Ford",
+      "country": "United Kingdom",
+      "industry": "Automotive",
+      "application": "Inspection / surveillance",
+      "status": "Experimental"
+    },
+    {
+      "year": 2018,
+      "partner": "Vtrus",
+      "operator": "Not specified",
+      "country": "United States",
+      "industry": "Industrial inspection",
+      "application": "Inspection / surveillance",
+      "status": "Experimental"
+    }
+  ],
+  "case_source": {
+    "title": "Applications of drones in warehouse operations",
+    "publisher": "ETH Zurich, 2019",
+    "url": "https://ethz.ch/content/dam/ethz/special-interest/mtec/pom-dam/documents/Drones%20in%20warehouse%20opeations_POM%20whitepaper%202019_Final.pdf",
+    "note": "The 12 cases above are the white paper's identified use-case sample. Some are experimental, prototype, patent, or future concepts—not completed commercial deployments."
+  }
+}

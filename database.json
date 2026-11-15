@@ -1,1 +1,24 @@
-{"updated_at":"2026-11-15","records":[{"title":"Drones for Racking & Warehouse Inspection","category":"Warehouse Inspection","date":"2019-09-24","keywords":["warehouse inspection","racking inspection","indoor drone","inventory"],"summary":"Highlights autonomous drones used inside warehouses for high-bay racking inspection, reducing the need for workers to access elevated structures.","url":"https://coptrz.com/blog/warehouse-inspection-drones/","source":"Imported seed record"}]}
+{
+  "updated_at": null,
+  "screening_criteria": {
+    "aircraft_required": "UAV, UAS, unmanned aerial vehicle/system, drone, or aerial robot",
+    "indoor_required": "Indoor, warehouse, factory, enclosed facility, racking, or indoor navigation evidence",
+    "outdoor_only": "Excluded",
+    "review_note": "Automated screening is preliminary; verify each source and its indoor use before citing."
+  },
+  "sources": {
+    "openalex": {
+      "type": "Automated scholarly metadata discovery",
+      "query_set": "Indoor UAV, warehouse drone, factory UAV, racking inspection"
+    },
+    "google_scholar": {
+      "type": "Manual targeted discovery",
+      "url": "https://scholar.google.com/scholar?q=drone+warehouse+rack+inspection"
+    },
+    "litmaps": {
+      "type": "Manual citation discovery",
+      "url": "https://www.litmaps.com/"
+    }
+  },
+  "records": []
+}

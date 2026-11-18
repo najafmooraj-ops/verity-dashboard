@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-17T11:11:45+00:00",
+  "updated_at": "2026-11-18T11:12:59+00:00",
   "screening_criteria": {
     "aircraft_required": "UAV, UAS, unmanned aerial vehicle/system, drone, or aerial robot",
     "indoor_required": "Indoor, warehouse, factory, enclosed facility, racking, or indoor navigation evidence",
@@ -1820,6 +1820,41 @@
       ],
       "screening_status": "Needs human review",
       "indoor_relevance": "Directly relevant"
+    },
+    {
+      "title": "CROWN-UAV: world-model-based planning for risk-aware and auditable UAV navigation",
+      "date": "2026-11-16",
+      "year": 2026,
+      "keywords": [],
+      "summary": "Autonomous UAV navigation in cluttered warehouses requires anticipation of dynamic and occluded hazards, explicit risk attribution, and recovery-aware action selection. CROWN-UAV integrates an object-centric encoder, a retrained action-conditioned dual world model, stochastic future hypotheses, a calibrated structured risk graph, candidate-level runtime filtering, discrete receding-horizon planning, and planner-grounded audit traces. A frozen, leakage-controlled revision campaign evaluated five implementations on 120 paired NVIDIA Isaac Sim 5.1.0 PhysX cases per method across three warehouse layouts, four hazard families, five disturbance conditions, and two independent scenario seeds. CROWN-Full achieved 59.2% success (95% CI 50.2–67.5%), identical to Greedy and slightly below MPPI (60.8%). Relative to Greedy, CROWN reduced near collisions from 51.7% to 30.8% (paired difference − 20.8% points, Holm-adjusted p = 0.00346) and increased mean minimum clearance by 0.241 m (adjusted p = 5.40e-9), while successful paths were 2.50 m longer and completion was 3.90 s slower on 53 jointly successful cases. At 4.5 s, the DualWorldModel improved UAV ADE (0.313 versus 1.314 m) and occupancy IoU (0.527 versus 0.392) relative to constant velocity, but object ADE was worse (0.772 versus 0.547 m). Full-loop p95 latency was 101.95 ms, with 150/15,170 deadline misses. The evidence supports an implementation-specific proximity-safety trade-off and auditable decision records, not higher task completion, universal predictor superiority, formal safety, or human-validated explainability.",
+      "url": "https://doi.org/10.1038/s41598-026-80541-x",
+      "doi": "https://doi.org/10.1038/s41598-026-80541-x",
+      "source": "Scientific Reports",
+      "indoor_evidence": [
+        "warehouse"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Directly relevant"
+    },
+    {
+      "title": "UAV-Flow++: A Unified Suite for Benchmarking and Learning Language-Guided UAV Flight",
+      "date": "2026-11-12",
+      "year": 2026,
+      "keywords": [
+        "UAV flight control",
+        "natural language instructions",
+        "imitation learning",
+        "benchmarking"
+      ],
+      "summary": "Language-guided UAV navigation has largely focused on long-horizon route planning, leaving short-range, object-relative flight maneuvers underexplored. To address this gap, we formulate Flying-on-a-Word (Flow), a task requiring a UAV to convert concise natural-language instruction, egocentric visual observation, and current state dynamics into continuous flight actions. Flow encompasses both primitive motion commands and complex object-interactive behaviors, assessing motion intent comprehension and spatial context grounding. To enable policy learning and closed-loop evaluation, we introduce UAV-Flow, a comprehensive dataset comprising 30,692 expert-piloted real-world trajectories across eight distinct motion categories, alongside 10,109 simulation trajectories in the UAV-Flow-Sim environment equipped with task-specific completion criteria. Furthermore, we develop FlowVLA, which undergoes imitation pretraining on mixed real-sim demonstrations and online post-training via Tail-Aware GRPO (TGRPO). By leveraging group reward distributions, TGRPO effectively reinforces high-reward action sequences. Evaluated on 273 held-out UAV-Flow-Sim episodes, pretrained FlowVLA achieves a mean success rate of 75.58%, outperforming the strongest baseline by 6.72 percentage points, which TGRPO post-training further elevates to 93.16% with superior sample efficiency. Physical UAV experiments demonstrate robust execution of object-relative commands in both indoor and outdoor real-world scenes. Together, Flow establishes a novel benchmark and learning framework for language-conditioned flight maneuvers.",
+      "url": "https://doi.org/10.48550/arxiv.2611.17163",
+      "doi": "https://doi.org/10.48550/arxiv.2611.17163",
+      "source": "arXiv (Cornell University)",
+      "indoor_evidence": [
+        "indoor"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Related indoor application"
     }
   ]
 }

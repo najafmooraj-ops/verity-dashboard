@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-18T11:12:59+00:00",
+  "updated_at": "2026-11-19T11:09:27+00:00",
   "screening_criteria": {
     "aircraft_required": "UAV, UAS, unmanned aerial vehicle/system, drone, or aerial robot",
     "indoor_required": "Indoor, warehouse, factory, enclosed facility, racking, or indoor navigation evidence",
@@ -1852,6 +1852,68 @@
       "source": "arXiv (Cornell University)",
       "indoor_evidence": [
         "indoor"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Related indoor application"
+    },
+    {
+      "title": "Simulation-in-the-Loop: Accelerating the Software Development Cycle for Multi-Agent Autonomous Drones",
+      "date": "2026-09-08",
+      "year": 2026,
+      "keywords": [
+        "simulation-in-the-loop",
+        "autonomous drones",
+        "software validation",
+        "Godot game engine",
+        "protocol transparency",
+        "collision avoidance",
+        "multi-agent coordination",
+        "GPS-denied environments",
+        "smart warehouse",
+        "flight control software",
+        "network latency",
+        "race conditions"
+      ],
+      "summary": "The deployment of autonomous Unmanned Aerial Vehicle (UAV) fleets in smart warehouses introduces significant challenges for software validation, particularly regarding multi-agent coordination and collision avoidance in GPS-denied environments. Testing these behaviors in physical industrial settings is often cost-prohibitive and risky for high-value assets. This paper presents an experience report on the development of a custom Simulation-in-the-Loop (SITL) environment built with the Godot Engine and a proprietary UDP-based communication protocol. A key feature of the platform is protocol transparency, allowing the real flight control software to interact with the virtual environment using the exact same datagrams as the physical hardware. The platform enables the concurrent execution of up to three independent agents, each maintaining isolated control pipelines and sensor feeds. Our results demonstrate that this high-fidelity virtual environment achieves high kinematic accuracy (RMSE of 0.042 m/s) and maintains sub-millisecond network latency, allowing for the early detection of race conditions and flight logic inconsistencies. By replicating DJI-specific flight dynamics and shared-space interactions, the solution accelerates the development cycle, reduces testing costs, and ensures a safer transition from code to physical warehouse operations.",
+      "url": "https://doi.org/10.5753/sbes.2026.28676",
+      "doi": "https://doi.org/10.5753/sbes.2026.28676",
+      "source": "Anais do Simpósio Brasileiro de Engenharia de Software (SBES)",
+      "indoor_evidence": [
+        "GPS-denied",
+        "warehouse",
+        "GPS-denied",
+        "warehouse"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Directly relevant"
+    },
+    {
+      "title": "Camera Calibration as a Software V&V Strategy for Safe Autonomous Indoor Drone Navigation",
+      "date": "2026-09-08",
+      "year": 2026,
+      "keywords": [
+        "camera calibration",
+        "autonomous drones",
+        "software verification and validation",
+        "lens distortion correction",
+        "flaky tests",
+        "deterministic testing",
+        "cyber-physical systems",
+        "intralogistics",
+        "GPS-denied environments",
+        "positioning accuracy",
+        "industrial safety"
+      ],
+      "summary": "This study investigates the impact of onboard camera calibration on the accuracy and software testability of autonomous indoor drones in industrial environments. In Cyber-Physical Systems (CPS), uncalibrated optical noise often generates non-deterministic inputs, leading to flaky tests and false failures that compromise the software validation process. By comparing factory settings against a refined approach using ChArUco patterns to correct intrinsic parameters and lens distortions, we demonstrate that proper calibration reduced the maximum positioning error in the transverse axis (𝑋) by approximately 63% at a 3-meter distance (dropping from 1.00,m to 0.37,m), while maintaining a vertical precision of 0.02,m. These findings highlight that precise optical adjustment is a critical Verification and Validation (VV) requirement rather than a mere hardware tuning step. By isolating physical noise from software logic bugs, our approach ensures deterministic testing and enables safe, autonomous intralogistics operations in GPS-denied environments, such as those found in the Manaus Industrial Pole.",
+      "url": "https://doi.org/10.5753/sbes.2026.26724",
+      "doi": "https://doi.org/10.5753/sbes.2026.26724",
+      "source": "Anais do Simpósio Brasileiro de Engenharia de Software (SBES)",
+      "indoor_evidence": [
+        "Indoor",
+        "indoor",
+        "factory",
+        "GPS-denied",
+        "GPS-denied"
       ],
       "screening_status": "Needs human review",
       "indoor_relevance": "Related indoor application"

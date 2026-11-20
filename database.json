@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-19T11:09:27+00:00",
+  "updated_at": "2026-11-20T11:12:29+00:00",
   "screening_criteria": {
     "aircraft_required": "UAV, UAS, unmanned aerial vehicle/system, drone, or aerial robot",
     "indoor_required": "Indoor, warehouse, factory, enclosed facility, racking, or indoor navigation evidence",
@@ -1917,6 +1917,112 @@
       ],
       "screening_status": "Needs human review",
       "indoor_relevance": "Related indoor application"
+    },
+    {
+      "title": "Network Congestion-Aware Path Planning for Indoor Multi-UAV Systems",
+      "date": "2026-10-01",
+      "year": 2026,
+      "keywords": [
+        "network congestion",
+        "path planning",
+        "multi-UAV systems",
+        "unmanned aerial vehicles",
+        "UAV routing"
+      ],
+      "summary": "Indoor multi-UAV systems have a variety of applications including for warehouse logistics, security and safety. Operating over Wi-Fi networks, such systems face network QoS challenges owing to congestion, interference, and varying traffic demands. However, they offer a distinct private network operating environment, in which a high degree of control over the number of active UAVs, their movement and their generated data traffic can typically be assumed. This research presents a novel communication-aware path-planning model for indoor multi-UAV Wi-Fi networks, where the mobility and AP-association decisions of each UAV influence the throughput and QoS experienced by other UAVs. A multi-agent path planning algorithm is developed in which UAV flight paths are planned in sequence, each using the A* algorithm to avoid previous UAVs and areas with high channel contention. The A* cost function incorporates three objectives: path length, QoS, and handover count, balancing travel efficiency against communication performance. The algorithm makes use of a detailed 3D map, containing empirical measurements of observed throughput and recorded RSSI values. The proposed algorithm was evaluated using ns-3 simulations and compared with a number of alternatives (Euclidean, Greedy QoS, and A* RSSI Aware), demonstrating its effectiveness in balancing QoS and path efficiency. Simulation results demonstrate that the proposed PQH A* algorithm improves QoS compared to the other evaluated approaches. In addition, unnecessary AP handovers and outage duration are significantly reduced, leading to more stable network operation, lower signaling overhead, and improved overall communication reliability.",
+      "url": "https://doi.org/10.1109/wimob70978.2026.11777918",
+      "doi": "https://doi.org/10.1109/wimob70978.2026.11777918",
+      "source": "IEEE International Conference on Wireless and Mobile Computing, Networking and Communications (WiMob)",
+      "indoor_evidence": [
+        "Indoor",
+        "Indoor",
+        "warehouse",
+        "indoor"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Directly relevant"
+    },
+    {
+      "title": "Enhanced Dynamic Obstacle Avoidance for UAVs Using Event Camera and Ego-Motion Compensation",
+      "date": "2025-10-25",
+      "year": 2025,
+      "keywords": [
+        "UAV obstacle avoidance",
+        "dynamic obstacle detection",
+        "event cameras",
+        "ego-motion compensation",
+        "adaptive thresholding",
+        "artificial potential field",
+        "collision-free path planning",
+        "dynamic environments",
+        "warehouse navigation"
+      ],
+      "summary": "To navigate dynamic environments safely, UAVs require accurate, real time onboard perception, which relies on ego motion compensation to separate self-induced motion from external dynamics and enable reliable obstacle detection. Traditional ego-motion compensation techniques are mainly based on optimization processes and may be computationally expensive for real-time applications or lack the precision needed to handle both rotational and translational movements, leading to issues such as misidentifying static elements as dynamic obstacles and generating false positives. In this paper, we propose a novel approach that integrates an event camera-based perception pipeline with an ego-motion compensation algorithm to accurately compensate for both rotational and translational UAV motion. An enhanced warping function, integrating IMU and depth data, is constructed to compensate camera motion based on real-time IMU data to remove ego motion from the asynchronous event stream, enhancing detection accuracy by reducing false positives and missed detections. On the compensated event stream, dynamic obstacles are detected by applying a motion aware adaptive threshold to the normalized mean timestamp image, with the threshold derived from the image’s spatial mean and standard deviation and adjusted by the UAV’s angular and linear velocities. Furthermore, in conjunction with a 3D Artificial Potential Field (APF) for obstacle avoidance, the proposed approach generates smooth, collision-free paths, addressing local minima issues through a rotational force component to ensure efficient UAV navigation in dynamic environments. The effectiveness of the proposed approach is validated through simulations, and its application for UAV navigation, safety, and efficiency in environments such as warehouses is demonstrated, where real-time response and precise obstacle avoidance are essential.",
+      "url": "https://doi.org/10.3390/drones9110745",
+      "doi": "https://doi.org/10.3390/drones9110745",
+      "source": "Drones",
+      "indoor_evidence": [
+        "warehouse"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Directly relevant"
+    },
+    {
+      "title": "A Comprehensive Survey on Short-Distance Localization of UAVs",
+      "date": "2025-03-04",
+      "year": 2025,
+      "keywords": [
+        "UAV positioning",
+        "ultra-wideband",
+        "GPS-denied environments",
+        "time of arrival",
+        "time difference of arrival",
+        "inertial measurement unit",
+        "visual odometry",
+        "anchor installation",
+        "synchronization",
+        "indoor navigation",
+        "autonomous landing",
+        "swarm control"
+      ],
+      "summary": "The localization of Unmanned Aerial Vehicles (UAVs) is a critical area of research, particularly in applications requiring high accuracy and reliability in Global Positioning System (GPS)-denied environments. This paper presents a comprehensive overview of short-distance localization methods for UAVs, exploring their strengths, limitations, and practical applications. Among short-distance localization methods, ultra-wideband (UWB) technology has gained significant attention due to its ability to provide accurate positioning, resistance to multipath interference, and low power consumption. Different approaches to the usage of UWB sensors, such as time of arrival (ToA), time difference of arrival (TDoA), and double-sided two-way ranging (DS-TWR), alongside their integration with complementary sensors like Inertial Measurement Units (IMUs), cameras, and visual odometry systems, are explored. Furthermore, this paper provides an evaluation of the key factors affecting UWB-based localization performance, including anchor placement, synchronization, and the challenges of combined use with other localization technologies. By highlighting the current trends in UWB-related research, including its increasing use in swarm control, indoor navigation, and autonomous landing, potential researchers could benefit from this study by using it as a guide for choosing the appropriate localization techniques, emphasizing UWB technology’s potential as a foundational technology in advanced UAV applications.",
+      "url": "https://doi.org/10.3390/drones9030188",
+      "doi": "https://doi.org/10.3390/drones9030188",
+      "source": "Drones",
+      "indoor_evidence": [
+        "indoor",
+        "GPS-denied",
+        "indoor"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Related indoor application"
+    },
+    {
+      "title": "Research on 3D Localization of Indoor UAV Based on Wasserstein GAN and Pseudo Fingerprint Map",
+      "date": "2024-12-09",
+      "year": 2024,
+      "keywords": [
+        "3D localization",
+        "Wasserstein GAN",
+        "fingerprint matching",
+        "localization error reduction"
+      ],
+      "summary": "In addition to outdoor environments, unmanned aerial vehicles (UAVs) also have a wide range of applications in indoor environments. The complex and changeable indoor environment and relatively small space make indoor localization of UAVs more difficult and urgent. An innovative 3D localization method for indoor UAVs using a Wasserstein generative adversarial network (WGAN) and a pseudo fingerprint map (PFM) is proposed in this paper. The primary aim is to enhance the localization accuracy and robustness in complex indoor environments. The proposed method integrates four classic matching localization algorithms with WGAN and PFM, demonstrating significant improvements in localization precision. Simulation results show that both the WGAN and PFM algorithms significantly reduce localization errors and enhance environmental adaptability and robustness in both small and large simulated indoor environments. The findings confirm the robustness and efficiency of the proposed method in real-world indoor localization scenarios. In the inertial measurement unit (IMU)-based tracking algorithm, using the fingerprint database of initial coarse particles and the fingerprint database processed by the WGAN algorithm to locate the UAV, the localization error of the four algorithms is reduced by 30.3% on average. After using the PFM algorithm for matching localization, the localization error of the UAV is reduced by 28% on average.",
+      "url": "https://doi.org/10.3390/drones8120740",
+      "doi": "https://doi.org/10.3390/drones8120740",
+      "source": "Drones",
+      "indoor_evidence": [
+        "Indoor",
+        "indoor",
+        "indoor",
+        "indoor",
+        "indoor",
+        "indoor",
+        "indoor",
+        "indoor"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Directly relevant"
     }
   ]
 }

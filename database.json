@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-20T11:12:29+00:00",
+  "updated_at": "2026-11-21T10:55:43+00:00",
   "screening_criteria": {
     "aircraft_required": "UAV, UAS, unmanned aerial vehicle/system, drone, or aerial robot",
     "indoor_required": "Indoor, warehouse, factory, enclosed facility, racking, or indoor navigation evidence",
@@ -2023,6 +2023,30 @@
       ],
       "screening_status": "Needs human review",
       "indoor_relevance": "Directly relevant"
+    },
+    {
+      "title": "AP Association for RHS-Enabled Cell-Free Uplink MIMO in Industrial Indoor UAV Networks",
+      "date": "2026-08-31",
+      "year": 2026,
+      "keywords": [
+        "reconfigurable holographic surfaces",
+        "access point association",
+        "MIMO detection",
+        "UAV height",
+        "spectral efficiency",
+        "energy efficiency",
+        "fairness"
+      ],
+      "summary": "Indoor industrial UAV uplink networks face serious blockage and shadowing from shelves, metal equipment, and production facilities. UAVs are also often clustered and fly along similar straight inspection routes at fixed heights. These features make traditional small-cell deployment less suitable, especially when high reliability, continuous coverage, and good service for weak UAVs are required. Cell-free networks can improve robustness through distributed access points (APs) and UAV?centric communications. Reconfigurable holographic surface (RHS)-enabled APs provide programmable analog receive beams and generate scalar post-RHS observations, which are jointly processed at the CPU for distributed uplink MIMO detection at relatively low hardware cost. Conventional AP association relies on distance, large-scale fading, or post-combining SINR obtained with user-specific digital combiners. Here, however, all UAVs served by a single-feed RHS AP share one amplitude?constrained receive pattern and one scalar AP output. We therefore derive an SINR-like score from this physical output and, under weak inter-AP disturbance correlation, approximate the CPU-side log-det objective by an additive per-AP surrogate, yielding a low-complexity ranking rule. The results show that the nearest AP is not always the best choice, the AP-UAV height difference may have an optimal value, and larger serving clusters bring diminishing returns. Simulations show that the proposed method improves the minimum UAV data rate, average spectral efficiency, fairness, and energy efficiency compared with benchmark schemes.",
+      "url": "https://doi.org/10.1109/tvt.2026.3729284",
+      "doi": "https://doi.org/10.1109/tvt.2026.3729284",
+      "source": "IEEE Transactions on Vehicular Technology",
+      "indoor_evidence": [
+        "Indoor",
+        "Indoor"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Related indoor application"
     }
   ]
 }

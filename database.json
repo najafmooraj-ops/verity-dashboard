@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-22T10:54:36+00:00",
+  "updated_at": "2026-11-23T11:15:27+00:00",
   "screening_criteria": {
     "aircraft_required": "UAV, UAS, unmanned aerial vehicle/system, drone, or aerial robot",
     "indoor_required": "Indoor, warehouse, factory, enclosed facility, racking, or indoor navigation evidence",
@@ -2044,6 +2044,59 @@
       "indoor_evidence": [
         "Indoor",
         "Indoor"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Related indoor application"
+    },
+    {
+      "title": "Data-driven edge intelligence in electric mobility: from battery health forecasting to high-speed autonomous control",
+      "date": "2026-11-18",
+      "year": 2026,
+      "keywords": [
+        "electric mobility",
+        "battery temperature prediction",
+        "driver behavior",
+        "Nissan Leaf",
+        "bidirectional LSTM",
+        "autonomous drones",
+        "drone racing",
+        "GPS-denied localization",
+        "reinforcement learning control",
+        "battery degradation",
+        "cellular aging",
+        "edge AI",
+        "electric vehicles"
+      ],
+      "summary": "Electric mobility is changing how people and goods move. Both electric cars and autonomous drones face a shared limit: their batteries. Lab tests cannot fully capture how these limits appear in real-world use. This thesis addresses that gap using data collected directly from the vehicles. Human driving behaviors were studied in passenger cars, with over 2.3 million data points collected from a Nissan Leaf using a custom data-logging device. The results show that rapid acceleration and other demanding behaviors raise battery temperature and accelerate cell aging. A Bidirectional Long Short-Term Memory model was developed to predict battery temperature, capturing the dynamic effects of real-world driving. These findings were then applied to autonomous drone racing. A vision-only system enables drones to fly at high speed without Global Positioning System localization, and a Reinforcement Learning controller achieves performance beyond human limits. However, such \"bang-bang\" aggressive control rapidly degrades batteries, with most cells failing in fewer than 20 flights. Building on these insights, the thesis introduces \"Energy-Aware Autonomy\". A framework that integrates battery prediction with control systems to maintain high performance while reducing the risk of battery damage.",
+      "url": "https://doi.org/10.48676/unibo/amsdottorato/13345",
+      "doi": "https://doi.org/10.48676/unibo/amsdottorato/13345",
+      "source": "AMS Dottorato Institutional Doctoral Theses Repository (University of Bologna)",
+      "indoor_evidence": [
+        "GPS-denied"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Related indoor application"
+    },
+    {
+      "title": "Visualizing Time-Dependent Navigation Zones in Mixed Reality",
+      "date": "2025-11-12",
+      "year": 2025,
+      "keywords": [
+        "mixed reality",
+        "robot path planning",
+        "UAV path planning",
+        "motion constraints",
+        "time scheduling",
+        "collaborative work environment",
+        "obstacle avoidance",
+        "virtual objects"
+      ],
+      "summary": "Using Mixed Reality (MR) to plan the motion of robots, for example the path of a drone, is an effective way to optimize their movements in a collaborative working environments. Path planning using MR allows for the incorporation of motion constraints arising from real-world obstacles, virtual objects, and time scheduling considerations. We address time-dependent path planning of a drone in a three-dimensional dynamic indoor environment using MR. We evaluate visualization methods which convey the planned path of the drone and which show time-dependent safety zones around real and virtual obstacles. Our results with 51 participants show the effectiveness of the visualization to support interactive path planning tasks. The contribution of our research is a novel MR visualization method for three-dimensional and time-dependent (4D) path planning.",
+      "url": "https://doi.org/10.1145/3756884.3770543",
+      "doi": "https://doi.org/10.1145/3756884.3770543",
+      "source": "ACM Symposium on Virtual Reality Software and Technology (VRST)",
+      "indoor_evidence": [
+        "indoor"
       ],
       "screening_status": "Needs human review",
       "indoor_relevance": "Related indoor application"

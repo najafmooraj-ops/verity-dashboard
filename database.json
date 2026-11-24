@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-23T11:15:27+00:00",
+  "updated_at": "2026-11-24T11:02:03+00:00",
   "screening_criteria": {
     "aircraft_required": "UAV, UAS, unmanned aerial vehicle/system, drone, or aerial robot",
     "indoor_required": "Indoor, warehouse, factory, enclosed facility, racking, or indoor navigation evidence",
@@ -2097,6 +2097,33 @@
       "source": "ACM Symposium on Virtual Reality Software and Technology (VRST)",
       "indoor_evidence": [
         "indoor"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Related indoor application"
+    },
+    {
+      "title": "Digital Documentation of Industrial Heritage: UAV Photogrammetry of a Historical Sugar Factory",
+      "date": "2026-11-10",
+      "year": 2026,
+      "keywords": [
+        "industrial heritage",
+        "sugar mills",
+        "UAV photogrammetry",
+        "point clouds",
+        "model accuracy",
+        "HBIM",
+        "geometric documentation",
+        "cultural heritage preservation",
+        "Málaga coast",
+        "Eastern Andalusia"
+      ],
+      "summary": "Sugar production was one of the most significant industrial activities in eastern Andalusia during the late nineteenth and early twentieth centuries. Along the Málaga coastline, remnants of these sugar factories can still be found, many of them currently in a state of abandonment or poor conservation, highlighting the need for effective strategies for their documentation and long-term preservation. This study presents the digital documentation of the San Joaquín sugar factory (Maro, Málaga, Spain) through UAV-based photogrammetry. A point cloud was generated from aerial images processed with specialised software. A comparative analysis was conducted using between 12.5% and 100% of the captured images to evaluate model completeness, local metric consistency, and computational cost. The full dataset provided the most complete representation, whereas the 50% dataset achieved similar local dimensional agreement with a shorter processing time. Reduced datasets (25–50%) provided useful representations of the main structures but failed to fully reconstruct certain elements, particularly the chimney. The point cloud was subsequently used to develop a preliminary HBIM-oriented geometric documentation model, supporting the interpretation of preserved structures and the hypothesis-based reconstruction of selected missing components. These results show that UAV photogrammetry and BIM-supported geometric modelling can provide a useful documentary basis for industrial heritage recording, preservation of heritage memory, architectural interpretation, and dissemination, while contributing to the long-term preservation and sustainable management of endangered industrial heritage.",
+      "url": "https://doi.org/10.3390/su182211459",
+      "doi": "https://doi.org/10.3390/su182211459",
+      "source": "Sustainability",
+      "indoor_evidence": [
+        "Factory",
+        "factory"
       ],
       "screening_status": "Needs human review",
       "indoor_relevance": "Related indoor application"

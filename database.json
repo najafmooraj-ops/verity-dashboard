@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-24T11:02:03+00:00",
+  "updated_at": "2026-11-25T11:07:35+00:00",
   "screening_criteria": {
     "aircraft_required": "UAV, UAS, unmanned aerial vehicle/system, drone, or aerial robot",
     "indoor_required": "Indoor, warehouse, factory, enclosed facility, racking, or indoor navigation evidence",
@@ -2127,6 +2127,65 @@
       ],
       "screening_status": "Needs human review",
       "indoor_relevance": "Related indoor application"
+    },
+    {
+      "title": "POMDP-based path planner for UAV-UGV cooperative systems in unstructured environments",
+      "date": "2026-11-23",
+      "year": 2026,
+      "keywords": [],
+      "summary": "This article presents a Partially Observable Markov Decision Process (POMDP)-based path planner for cooperative unmanned aerial vehicle (UAV)-unmanned ground vehicle (UGV) systems in unstructured environments. Our decentralized framework addresses partial observability, dynamic obstacles, and communication constraints through belief-space planning and a fault-tolerant communication protocol. Optimized with SARSOP and Bayesian-tuned rewards, it achieves real-time scalability and robustness. Validated in six simulated environments (urban rubble, forest, tunnel, open field, urban canyon, and indoor warehouse) and a 10 × 10 m real-world rubble field, the planner outperforms classical (A*, RRT* (rapidly-exploring random trees), and APF (artificial potential field)), learning-based (MADDPG), and modern baselines (DESPOT and MAPPO), achieving a 94% average success rate, <6% collision rate, and 82%–95% exploration coverage. Large-scale simulations (50 × 50 m) and extreme weather tests (winds and rain) demonstrate scalability and robustness, while a lightweight NVIDIA Jetson implementation ensures practical deployment. The framework advances multi-agent POMDP applications, offering a scalable, safe solution for disaster response, and planetary exploration.",
+      "url": "https://doi.org/10.1177/00207209261508179",
+      "doi": "https://doi.org/10.1177/00207209261508179",
+      "source": "International Journal of Electrical Engineering Education",
+      "indoor_evidence": [
+        "indoor",
+        "warehouse"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Directly relevant"
+    },
+    {
+      "title": "Compact Docking Station for Sub-150g UAV Indoor Precise Landing",
+      "date": "2024-06-04",
+      "year": 2024,
+      "keywords": [
+        "drone localization",
+        "HTC Vive",
+        "OptiTrack"
+      ],
+      "summary": "To be used at their full potential, sub-150g drones need to to be integrated in a “foolproof” deployment system, from take-off to landing. In this paper, we introduce a compact (less than$15\\times 15$cm) docking station that could fit in a suitcase. To achieve accurate drone localization, we evaluated various systems (OptiTrack Duo/Trio, Bitcraze's radio-based system) and found that a vertically mounted lighthouse sensor from the HTC Vive system offers a few centimeters of accuracy while being significantly smaller than multi-camera systems. Our final docking station design incorporates this sensor, along with an actuated landing pad that retracts from the sensor's field of view during landing. This novel landing system paves the way for the use of small indoor drones by professionals without the need for extensive drone training.",
+      "url": "https://doi.org/10.1109/icuas60882.2024.10557124",
+      "doi": "https://doi.org/10.1109/icuas60882.2024.10557124",
+      "source": "International Conference on Unmanned Aircraft Systems (ICUAS)",
+      "indoor_evidence": [
+        "Indoor",
+        "indoor"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Related indoor application"
+    },
+    {
+      "title": "Diffusion-based 4D Trajectory Prediction and Distributed Control for UAV Swarms",
+      "date": "2026-09-01",
+      "year": 2026,
+      "keywords": [
+        "UAV swarms",
+        "diffusion models",
+        "uncertainty-aware control",
+        "formation control",
+        "closed-loop tracking",
+        "urban airspace",
+        "low-altitude airspace"
+      ],
+      "summary": "Accurate 4D trajectory prediction and closed-loop tracking are essential for Unmanned Aerial Vehicle (UAV) swarms to achieve safe and efficient operations in complex low-altitude environments such as urban airspaces, industrial sites, and indoor facilities. However, this task remains challenging due to intrinsic nonlinearity of UAV swarm dynamics and strict real-time constraints of swarm formation control. To address these challenges, we propose a unified framework that couples coarse-to-fine trajectory forecasting with uncertainty-aware Distributed Nonlinear Model Predictive Control (DNMPC). Our approach features two key innovations: 1) a dimension-decoupled trajectory prediction module that reduces computational complexity by forecasting axis-wise motion, and 2) a diffusion-based residual dynamics refinement module that captures temporally correlated dynamic uncertainties. These refined predictions are then integrated into a DNMPC loop to ensure formation stability. We also introduce a synchronized multi-scenario 4D UAV swarm dataset spanning six representative airspace scenarios. The dataset contains over 7,900 frames of synchronized three-UAV trajectories with frame-level annotations of speed intention and target sector. Extensive experiments demonstrate that our approach outperforms state-of-the-art baselines, reducing trajectory tracking error by up to 10-15% and achieving sub-0.07 m average tracking error in complex urban and industrial environments, while maintaining real-time inference speeds of 34 FPS (sub-30 ms latency) suitable for agile flight.",
+      "url": "https://doi.org/10.1109/iros61738.2026.11777385",
+      "doi": "https://doi.org/10.1109/iros61738.2026.11777385",
+      "source": "IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)",
+      "indoor_evidence": [
+        "indoor"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Directly relevant"
     }
   ]
 }

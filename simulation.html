@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Warehouse Rack Inspection — Drone vs Operator DES</title>
+<style>
+:root{--bg:#0b1119;--panel:#141e2a;--panel2:#1c2938;--line:#304154;--txt:#e9f0f8;--muted:#9aacc0;--blue:#56a9ff;--teal:#46d6b0;--amber:#ffbf62;--red:#ff7070}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--txt);font:14px/1.45 system-ui,-apple-system,Segoe UI,sans-serif}
+header{padding:17px 22px;border-bottom:1px solid var(--line);background:#0e1722;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+h1{font-size:18px;margin:0;font-weight:650}.tag{font:11px ui-monospace,monospace;border:1px solid var(--line);border-radius:99px;padding:4px 9px;color:var(--muted)}
+.app{display:grid;grid-template-columns:270px minmax(400px,1fr) 300px;gap:14px;padding:14px;max-width:1700px;margin:auto}
+.panel,.stage{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px;min-width:0}
+h2{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 13px}
+.ctrl{margin:0 0 15px}.ctrl label{display:flex;justify-content:space-between;gap:8px;color:var(--muted);font-size:12px;margin-bottom:5px}.ctrl b{color:var(--txt);font:12px ui-monospace,monospace}
+input[type=range]{width:100%;accent-color:var(--blue)}
+select{width:100%;background:var(--panel2);color:var(--txt);border:1px solid var(--line);padding:7px;border-radius:7px}
+button{background:var(--panel2);color:var(--txt);border:1px solid var(--line);border-radius:8px;padding:9px 12px;cursor:pointer;font-weight:600}
+button.primary{background:var(--blue);color:#071321;border-color:var(--blue)}button:hover{filter:brightness(1.12)}
+.btns{display:flex;gap:8px;margin-top:12px}.btns button{flex:1}
+.stage{padding:0;overflow:hidden}.stagehead{padding:12px 15px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center}
+.stagehead strong{font-size:13px}.stagehead span{font:11px ui-monospace,monospace;color:var(--muted)}
+canvas{display:block;width:100%;height:510px;background:#101a26}
+.legend{display:flex;gap:15px;flex-wrap:wrap;padding:10px 15px;color:var(--muted);font-size:11px;border-top:1px solid var(--line)}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:5px}
+.metrics{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.kpi{background:var(--panel2);border:1px solid var(--line);border-radius:9px;padding:9px}
+.kpi span{display:block;color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.07em}.kpi b{font:17px ui-monospace,monospace}
+.mode{border-top:1px solid var(--line);padding-top:12px;margin-top:13px}.mode h3{font-size:12px;margin:0 0 8px}.mode p{font-size:11px;color:var(--muted);margin:5px 0}
+.note{background:var(--panel2);border-left:3px solid var(--amber);padding:10px;border-radius:7px;color:var(--muted);font-size:11px;margin-top:13px}
+.progress{height:7px;background:#263648;border-radius:8px;overflow:hidden;margin:8px 0}.progress div{height:100%;width:0;background:var(--blue)}
+.small{font-size:11px;color:var(--muted)}.results{font-size:12px;color:var(--muted);line-height:1.65;margin-top:12px}
+@media(max-width:1100px){.app{grid-template-columns:1fr}.panel{order:0}.stage{order:1}canvas{height:460px}}
+</style></head>
+<body>
+<header><h1>Warehouse Rack Inspection — DES</h1><span class="tag">DISCRETE-EVENT SIMULATION</span><span class="tag">DRONE vs OPERATOR</span><span class="tag" id="clockTag">SIM TIME: 00:00</span></header>
+<div class="app">
+<aside class="panel">
+<h2>Warehouse configuration</h2>
+<div class="ctrl"><label>Aisles <b id="aislesV">8</b></label><input id="aisles" type="range" min="2" max="16" value="8"></div>
+<div class="ctrl"><label>Rack bays per aisle <b id="baysV">20</b></label><input id="bays" type="range" min="5" max="40" value="20"></div>
+<div class="ctrl"><label>Aisle length (meters) <b id="lengthV">60</b></label><input id="length" type="range" min="20" max="120" step="5" value="60"></div>
+<h2 style="margin-top:20px">Movement & inspection</h2>
+<div class="ctrl"><label>Drone speed (m/s) <b id="droneSpeedV">2.0</b></label><input id="droneSpeed" type="range" min=".5" max="5" step=".1" value="2"></div>
+<div class="ctrl"><label>Operator walking speed (m/s) <b id="walkSpeedV">1.2</b></label><input id="walkSpeed" type="range" min=".5" max="2" step=".1" value="1.2"></div>
+<div class="ctrl"><label>Drone scan time / bay (sec) <b id="droneScanV">8</b></label><input id="droneScan" type="range" min="2" max="30" step="1" value="8"></div>
+<div class="ctrl"><label>Operator inspection / bay (sec) <b id="humanScanV">25</b></label><input id="humanScan" type="range" min="5" max="90" step="1" value="25"></div>
+<h2 style="margin-top:20px">Downtime assumptions</h2>
+<div class="ctrl"><label>Drone battery endurance (min) <b id="batteryV">45</b></label><input id="battery" type="range" min="15" max="120" step="5" value="45"></div>
+<div class="ctrl"><label>Drone recharge / swap (min) <b id="rechargeV">20</b></label><input id="recharge" type="range" min="5" max="60" step="5" value="20"></div>
+<div class="ctrl"><label>Operator break interval (min) <b id="breakEveryV">240</b></label><input id="breakEvery" type="range" min="120" max="360" step="30" value="240"></div>
+<div class="ctrl"><label>Operator break duration (min) <b id="breakV">30</b></label><input id="break" type="range" min="10" max="60" step="5" value="30"></div>
+<div class="btns"><button class="primary" id="run">Run simulation</button><button id="reset">Reset</button></div>
+<div class="btns"><button id="pause">Pause</button><button id="step">Step</button></div>
+<div class="ctrl" style="margin-top:14px"><label>Animation speed <b id="speedV">60×</b></label><input id="speed" type="range" min="10" max="600" step="10" value="60"></div>
+<div class="note"><b>Operating windows</b><br>Drone: 8:00 PM–6:00 AM only.<br>Operator: 6:00 AM–6:00 PM only.<br>Two-hour no-work buffer from 6:00–8:00 PM; the shifts never overlap.</div>
+</aside>
+<main class="stage">
+<div class="stagehead"><strong>Warehouse floor plan · serpentine inspection route</strong><span id="progressText">Ready to simulate</span></div>
+<canvas id="warehouse"></canvas>
+<div class="legend"><span><i class="dot" style="background:var(--teal)"></i>Drone route / completed</span><span><i class="dot" style="background:var(--blue)"></i>Operator route / completed</span><span><i class="dot" style="background:var(--amber)"></i>Current inspection location</span><span>Each square = one rack bay inspection</span></div>
+</main>
+<aside class="panel">
+<h2>Simulation results</h2>
+<div class="metrics">
+<div class="kpi"><span>Rack locations</span><b id="locations">160</b></div>
+<div class="kpi"><span>Simulated clock</span><b id="simClock">00:00</b></div>
+<div class="kpi"><span>Drone completion</span><b id="droneFinish">—</b></div>
+<div class="kpi"><span>Operator completion</span><b id="humanFinish">—</b></div>
+<div class="kpi"><span>Drone distance</span><b id="droneDist">—</b></div>
+<div class="kpi"><span>Operator distance</span><b id="humanDist">—</b></div>
+<div class="kpi"><span>Drone elapsed</span><b id="droneElapsed">—</b></div>
+<div class="kpi"><span>Operator elapsed</span><b id="humanElapsed">—</b></div>
+</div>
+<div class="mode">
+<h3>7-DAY PRODUCTIVITY · ONE RESOURCE OF EACH TYPE</h3>
+<div class="metrics">
+<div class="kpi"><span>Drone bays / week</span><b id="droneWeeklyBays">—</b></div>
+<div class="kpi"><span>Operator bays / week</span><b id="humanWeeklyBays">—</b></div>
+<div class="kpi"><span>Drone active hours / week</span><b id="droneWeeklyHours">—</b></div>
+<div class="kpi"><span>Operator active hours / week</span><b id="humanWeeklyHours">—</b></div>
+<div class="kpi"><span>Drone bays / active hour</span><b id="droneRate">—</b></div>
+<div class="kpi"><span>Operator bays / active hour</span><b id="humanRate">—</b></div>
+</div>
+<p class="small">Weekly totals assume the same full-warehouse pass is completed once per day for seven days. Active hours exclude battery downtime and operator breaks.</p>
+</div>
+<div class="mode"><h3 style="color:var(--teal)">DRONE</h3><div class="progress"><div id="droneProgress" style="background:var(--teal)"></div></div><p id="droneDetail">Awaiting simulation</p></div>
+<div class="mode"><h3 style="color:var(--blue)">OPERATOR</h3><div class="progress"><div id="humanProgress"></div></div><p id="humanDetail">Awaiting simulation</p></div>
+<div class="results" id="comparison">Run the simulation to compare completion time, travel distance, and downtime.</div>
+<div class="note"><b>Model scope</b><br>The animation models one representative inspection pass. Weekly productivity totals assume one full pass per day for seven days. It does not yet model rack-damage probabilities, image-processing latency, false detections, repair work, multiple drones/operators, or congestion with warehouse traffic.</div>
+</aside></div>
+<script>
+const $=id=>document.getElementById(id);
+const controls=['aisles','bays','length','droneSpeed','walkSpeed','droneScan','humanScan','battery','recharge','breakEvery','break','speed'];
+const defaults={aisles:8,bays:20,length:60,droneSpeed:2,walkSpeed:1.2,droneScan:8,humanScan:25,battery:45,recharge:20,breakEvery:240,break:30,speed:60};
+let models=null, simClock=0, playing=false, lastFrame=0;
+const DAY=1440;
+function val(id){return Number($(id).value)}
+function fmtMin(m){if(!isFinite(m))return '—';let h=Math.floor(m/60),mi=Math.floor(m%60);return `${String(h%24).padStart(2,'0')}:${String(mi).padStart(2,'0')}`}
+function fmtElapsed(m){let h=Math.floor(m/60),mi=Math.floor(m%60);return h?`${h}h ${mi}m`:`${mi}m`}
+function params(){return Object.fromEntries(controls.filter(x=>x!=='speed').map(x=>[x,val(x)]))}
+function buildRoute(p){
+ let pts=[], aisleGap=p.length/(p.bays-1||1), xGap=1.0;
+ // Local coordinates: aisle index is x, bay index is y; aisle crossovers add travel at aisle ends.
+ for(let a=0;a<p.aisles;a++){
+   for(let j=0;j<p.bays;j++){
+     let bay=(a%2===0)?j:(p.bays-1-j);
+     pts.push({a,b:bay,x:a*4.2,y:bay*aisleGap});
+   }
+ }
+ return pts;
+}
+function inWindow(t,kind){
+ let m=((t%DAY)+DAY)%DAY;
+ return kind==='drone'?(m>=1200||m<360):(m>=360&&m<1080);
+}
+function nextWindow(t,kind){
+ if(inWindow(t,kind))return t;
+ let day=Math.floor(t/DAY),m=t-day*DAY;
+ if(kind==='drone')return m<360?day*DAY+360:day*DAY+1200;
+ return m<360?day*DAY+360:day*DAY+DAY+360;
+}
+function consumeWindow(t,dur,kind){
+ let left=dur,cur=t,guard=0;
+ while(left>1e-8&&guard++<1000){
+   cur=nextWindow(cur,kind);
+   let day=Math.floor(cur/DAY),m=cur-day*DAY;
+   let end=kind==='drone'?(m<360?day*DAY+360:day*DAY+DAY+360):(day*DAY+1080);
+   let avail=end-cur,used=Math.min(left,avail);
+   cur+=used;left-=used;
+ }
+ return cur;
+}
+function createModel(kind,p,route){
+ let speed=(kind==='drone'?p.droneSpeed:p.walkSpeed), scan=(kind==='drone'?p.droneScan:p.humanScan)/60;
+ let t=kind==='drone'?1200:360, distance=0,work=0,downtime=0,battery=p.battery,untilBreak=p.breakEvery;
+ let events=[],prev={x:0,y:0},completed=0;
+ for(let i=0;i<route.length;i++){
+   let q=route[i],dx=q.x-prev.x,dy=q.y-prev.y;
+   // Along-aisle distance uses actual aisle length; aisle-to-aisle crossover is 4.2 m.
+   let d=Math.abs(dx)+Math.abs(dy);distance+=d;
+   let travel=d/speed/60,task=travel+scan;
+   if(kind==='drone'){
+     if(battery<task*60){t+=p.recharge;downtime+=p.recharge;battery=p.battery;}
+     let start=consumeWindow(t,travel,'drone'),travelEnd=start+travel;
+     let scanStart=consumeWindow(travelEnd,scan,'drone'),end=scanStart+scan;
+     downtime+=(start-t)+(scanStart-travelEnd);
+     events.push({start,end,travelStart:start,travelEnd,scanStart,point:q,index:i});
+     battery-=task*60;work+=task*60;t=end;
+   }else{
+     let start=consumeWindow(t,travel,'human'),travelEnd=start+travel;
+     downtime+=(start-t);
+     let scanStart=consumeWindow(travelEnd,scan,'human'),end=scanStart+scan;
+     downtime+=(scanStart-travelEnd);
+     events.push({start,end,travelStart:start,travelEnd,scanStart,point:q,index:i});
+     work+=task*60;t=end;
+     untilBreak-=task*60;
+     if(untilBreak<=0){t+=p.break;downtime+=p.break;untilBreak=p.breakEvery;}
+   }
+   completed++;prev=q;
+ }
+ return {kind,events,finish:t,start:kind==='drone'?1200:360,distance,work,downtime,count:completed,route};
+}
+function runSim(){
+ const p=params(),route=buildRoute(p);
+ models={drone:createModel('drone',p,route),human:createModel('human',p,route)};
+ simClock=0;playing=true;lastFrame=0;
+ $('locations').textContent=route.length;
+ $('droneFinish').textContent=fmtMin(models.drone.finish);
+ $('humanFinish').textContent=fmtMin(models.human.finish);
+ $('droneDist').textContent=models.drone.distance.toFixed(0)+' m';
+ $('humanDist').textContent=models.human.distance.toFixed(0)+' m';
+ $('droneElapsed').textContent=fmtElapsed(models.drone.finish-models.drone.start);
+ $('humanElapsed').textContent=fmtElapsed(models.human.finish-models.human.start);
+ $('droneDetail').textContent=`${models.drone.count} bays · ${models.drone.work.toFixed(0)} min active work · ${models.drone.downtime.toFixed(0)} min downtime`;
+ $('humanDetail').textContent=`${models.human.count} bays · ${models.human.work.toFixed(0)} min active work · ${models.human.downtime.toFixed(0)} min downtime`;
+ $('droneWeeklyBays').textContent=(models.drone.count*7).toLocaleString();
+ $('humanWeeklyBays').textContent=(models.human.count*7).toLocaleString();
+ $('droneWeeklyHours').textContent=(models.drone.work*7/60).toFixed(1)+' h';
+ $('humanWeeklyHours').textContent=(models.human.work*7/60).toFixed(1)+' h';
+ $('droneRate').textContent=(models.drone.count/(models.drone.work/60)).toFixed(1);
+ $('humanRate').textContent=(models.human.count/(models.human.work/60)).toFixed(1);
+ const faster=models.drone.finish-models.drone.start<models.human.finish-models.human.start?'Drone':'Operator';
+ const dm=models.drone.finish-models.drone.start,hm=models.human.finish-models.human.start;
+ $('comparison').innerHTML=`<b>Initial comparison</b><br>${faster} completes its assigned inspection cycle sooner based on elapsed time from its own shift start. Drone cycle: <b>${fmtElapsed(dm)}</b>; operator cycle: <b>${fmtElapsed(hm)}</b>.<br>Distance difference: <b>${Math.abs(models.drone.distance-models.human.distance).toFixed(0)} m</b>. Both scenarios inspect the same ${route.length} locations.`;
+ $('progressText').textContent='Simulation running · use Pause / Step';
+ draw();
+}
+function positionAt(model,t){
+ let ev=model.events;
+ if(t<model.start)return {x:0,y:0,index:-1,phase:'off'};
+ let prev={x:0,y:0};
+ for(let e of ev){
+   if(t<e.start)return {...prev,index:e.index-1,phase:'waiting'};
+   if(t<=e.end){
+     if(t<e.travelEnd && e.travelEnd>e.travelStart){
+       let f=(t-e.travelStart)/(e.travelEnd-e.travelStart);
+       return {x:prev.x+(e.point.x-prev.x)*f,y:prev.y+(e.point.y-prev.y)*f,index:e.index,phase:'moving'};
+     }
+     return {x:e.point.x,y:e.point.y,index:e.index,phase:'scanning'};
+   }
+   prev=e.point;
+ }
+ return {...prev,index:ev.length-1,phase:'done'};
+}
+function progressAt(model,t){return Math.max(0,Math.min(1,model.events.filter(e=>e.end<=t).length/model.count))}
+function draw(){
+ const c=$('warehouse'),ctx=c.getContext('2d'),r=c.getBoundingClientRect(),dpr=window.devicePixelRatio||1;
+ c.width=r.width*dpr;c.height=r.height*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);
+ const W=r.width,H=r.height,p=params(),pad={x:55,y:35},plotW=W-110,plotH=H-90;
+ ctx.fillStyle='#101a26';ctx.fillRect(0,0,W,H);
+ const xAt=a=>pad.x+(p.aisles===1?0:a/(p.aisles-1))*plotW;
+ const yAt=b=>pad.y+(p.bays===1?0:b/(p.bays-1))*plotH;
+ // aisle structures
+ for(let a=0;a<p.aisles;a++){
+   let x=xAt(a);
+   ctx.fillStyle='#1d2b3a';ctx.fillRect(x-10,pad.y-12,20,plotH+24);
+   ctx.strokeStyle='#3b5065';ctx.lineWidth=1;ctx.strokeRect(x-10,pad.y-12,20,plotH+24);
+   ctx.fillStyle='#9aacc0';ctx.font='10px system-ui';ctx.textAlign='center';ctx.fillText(`AISLE ${a+1}`,x,H-25);
+   for(let b=0;b<p.bays;b++){
+     let y=yAt(b);ctx.fillStyle='#62768b';ctx.fillRect(x-3,y-3,6,6);
+   }
+ }
+ ctx.textAlign='left';ctx.fillStyle='#8fa3b9';ctx.font='10px system-ui';ctx.fillText('WAREHOUSE RACK BAYS',14,18);
+ if(models){
+   for(const [kind,color] of [['drone','#46d6b0'],['human','#56a9ff']]){
+     let m=models[kind],pos=positionAt(m,simClock),done=Math.floor(progressAt(m,simClock)*m.count);
+     // draw completed points
+     ctx.fillStyle=color;ctx.globalAlpha=.7;
+     for(let i=0;i<done;i++){let q=m.route[i];ctx.beginPath();ctx.arc(xAt(q.a),yAt(q.b),3,0,Math.PI*2);ctx.fill()}
+     ctx.globalAlpha=1;
+     if(pos.index>=0&&pos.index<m.count){
+       let q=m.route[pos.index],x=xAt(q.a),y=yAt(q.b);
+       ctx.beginPath();ctx.arc(x,y,11,0,Math.PI*2);ctx.fillStyle=color;ctx.globalAlpha=.2;ctx.fill();ctx.globalAlpha=1;
+       ctx.beginPath();ctx.arc(x,y,6,0,Math.PI*2);ctx.fillStyle=pos.phase==='scanning'?'#ffbf62':color;ctx.fill();
+       ctx.strokeStyle='#071321';ctx.lineWidth=2;ctx.stroke();
+       ctx.fillStyle=color;ctx.font='bold 11px system-ui';ctx.fillText(kind==='drone'?'D':'O',x+9,y-8);
+     }
+   }
+   $('droneProgress').style.width=(progressAt(models.drone,simClock)*100)+'%';
+   $('humanProgress').style.width=(progressAt(models.human,simClock)*100)+'%';
+   $('simClock').textContent=fmtMin(simClock%1440);$('clockTag').textContent='SIM TIME: '+fmtMin(simClock%1440);
+   $('progressText').textContent=`Clock ${fmtMin(simClock%1440)} · Drone ${Math.round(progressAt(models.drone,simClock)*100)}% · Operator ${Math.round(progressAt(models.human,simClock)*100)}%`;
+   if(progressAt(models.drone,simClock)>=1&&progressAt(models.human,simClock)>=1){playing=false;$('progressText').textContent='Both inspection cycles complete';}
+ }else{$('simClock').textContent='00:00';}
+}
+function tick(now){
+ if(playing&&models){
+   if(!lastFrame)lastFrame=now;
+   let dt=(now-lastFrame)/1000;lastFrame=now;
+   simClock+=dt*val('speed');
+   const max=Math.max(models.drone.finish,models.human.finish);
+   if(simClock>max)simClock=max;
+   draw();
+ }
+ requestAnimationFrame(tick);
+}
+$('run').onclick=runSim;
+$('reset').onclick=()=>{playing=false;models=null;simClock=0;['droneFinish','humanFinish','droneDist','humanDist','droneElapsed','humanElapsed'].forEach(id=>$(id).textContent='—');$('droneDetail').textContent='Awaiting simulation';$('humanDetail').textContent='Awaiting simulation';['droneWeeklyBays','humanWeeklyBays','droneWeeklyHours','humanWeeklyHours','droneRate','humanRate'].forEach(id=>$(id).textContent='—');$('comparison').textContent='Run the simulation to compare completion time, travel distance, and downtime.';$('droneProgress').style.width='0%';$('humanProgress').style.width='0%';$('progressText').textContent='Ready to simulate';draw()};
+$('pause').onclick=()=>{playing=!playing;lastFrame=0;$('progressText').textContent=playing?'Simulation running':'Simulation paused'};
+$('step').onclick=()=>{if(models){playing=false;simClock=Math.min(Math.max(models.drone.finish,models.human.finish),simClock+15);draw()}};
+controls.forEach(id=>{$(id).addEventListener('input',()=>{$(id+'V').textContent=val(id)+(id==='droneSpeed'||id==='walkSpeed'?'':id==='speed'?'×':'')+(id==='droneSpeed'||id==='walkSpeed'?'':id==='speed'?'':'');if(id!=='droneSpeed'&&id!=='walkSpeed'&&id!=='speed'&&id!=='length')$(id+'V').textContent=val(id);if(models){playing=false;models=null;$('progressText').textContent='Settings changed · run again';draw()}})});
+function syncLabels(){controls.forEach(id=>{$(id+'V').textContent=val(id)+(id==='droneSpeed'||id==='walkSpeed'?'':id==='speed'?'×':'')})}
+syncLabels();draw();window.addEventListener('resize',draw);requestAnimationFrame(tick);
+</script></body></html>

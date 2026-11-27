@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-26T11:06:29+00:00",
+  "updated_at": "2026-11-27T11:01:59+00:00",
   "screening_criteria": {
     "aircraft_required": "UAV, UAS, unmanned aerial vehicle/system, drone, or aerial robot",
     "indoor_required": "Indoor, warehouse, factory, enclosed facility, racking, or indoor navigation evidence",
@@ -2203,6 +2203,31 @@
       "doi": "https://doi.org/10.48550/arxiv.2611.26048",
       "source": "arXiv",
       "indoor_evidence": [
+        "indoor"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Related indoor application"
+    },
+    {
+      "title": "FPGA-Accelerated Onboard Perception for an Indoor Quadrotor UAV",
+      "date": "2026-09-01",
+      "year": 2026,
+      "keywords": [
+        "FPGA acceleration",
+        "unmanned aerial vehicles",
+        "YOLOv3",
+        "optical flow",
+        "energy efficiency",
+        "flight time",
+        "situational awareness"
+      ],
+      "summary": "This paper investigates whether field-programmable gate array (FPGA)-accelerated visual perception can operate onboard a flight-capable unmanned aerial vehicle (UAV) under practical payload and energy constraints. The prototype integrates a Pixhawk 6X flight controller, an H-Flow optical-flow and range sensor, an Intel RealSense D435i camera, and an AMD Kria KR260 mission computer. A You Only Look Once version 3 (YOLOv3) detector executes on a Deep Learning Processing Unit (DPU) implemented in the programmable logic (PL), while the processing system (PS) performs camera acquisition, communication, preprocessing, post-processing, and result logging. Preliminary indoor tests report a 2.115 kg take-off mass, a 29.984 Hz mean image-acquisition rate, and a 4.9 frames/s mean end-to-end perception rate at$424 \\times 240$. The implemented design has an estimated on-chip power of 4.048 W and uses less than 30% of each reported major PL resource category. Flight-time ranges of 9-10 min and 15-16 min were observed with the DPU inference workload active and inactive, respectively. These results demonstrate system-level feasibility for low-speed indoor situational awareness while identifying software-pipeline throughput and direct energy measurement as the main targets for further development.",
+      "url": "https://doi.org/10.1109/etfa68377.2026.11725264",
+      "doi": "https://doi.org/10.1109/etfa68377.2026.11725264",
+      "source": "IEEE International Conference on Emerging Technologies and Factory Automation (ETFA)",
+      "indoor_evidence": [
+        "Indoor",
+        "indoor",
         "indoor"
       ],
       "screening_status": "Needs human review",

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-27T11:01:59+00:00",
+  "updated_at": "2026-11-28T10:58:09+00:00",
   "screening_criteria": {
     "aircraft_required": "UAV, UAS, unmanned aerial vehicle/system, drone, or aerial robot",
     "indoor_required": "Indoor, warehouse, factory, enclosed facility, racking, or indoor navigation evidence",
@@ -2232,6 +2232,37 @@
       ],
       "screening_status": "Needs human review",
       "indoor_relevance": "Related indoor application"
+    },
+    {
+      "title": "Light-Guided Autonomous Drone Navigation for Indoor GPS-Denied Environments",
+      "date": "2026-01-01",
+      "year": 2026,
+      "keywords": [
+        "Li-Fi",
+        "visible light communication",
+        "indoor positioning",
+        "GPS-denied navigation",
+        "autonomous UAV navigation",
+        "LED luminaires",
+        "micro UAV",
+        "optical localization"
+      ],
+      "summary": "Autonomous drones operating in indoor environments cannot rely on the global positioning system (GPS) signals for precise navigation due to severe signal attenuation and multipath interference in GPS-denied spaces. This paper presents a novel Li-Fi-based optical positioning, and combined with high-sensitivity photodiode sensor arrays, to enable robust drone guidance in challenging indoor environments where conventional radio-frequency localization fails. The proposed system uses strategically distributed ceiling-mounted Light Emitting Diode (LED) luminaires across the operational space, each transmitting unique identification codes through high-frequency light modulation at rates imperceptible to human vision, thereby maintaining dual functionality for simultaneous illumination and positioning. Unlike existing VLC positioning studies that focus on static receivers, our system integrates real-time optical localization directly into the UAV control loop at 120 Hz, achieving closed-loop autonomous navigation without GPS or RF assistance. The system demonstrates sub-decimetric positioning accuracy (<8 cm), low latency (4.2 ms), and operates successfully on resource constrained micro-UAV platforms (250 g quadcopter with STM32 microcontroller. OpenELAB Technology Ltd., Garching bei München, Germany). Experimental validation includes complex 3D trajectory tracking, multi-room scalability analysis, and quantitative comparison with existing localization technologies, confirming the viability of Li-Fi guided autonomous flight for practical indoor application.",
+      "url": "https://doi.org/10.70322/dav.2026.10007",
+      "doi": "https://doi.org/10.70322/dav.2026.10007",
+      "source": "Drones and autonomous vehicles/Drones and Autonomous Vehicles",
+      "indoor_evidence": [
+        "Indoor",
+        "GPS-Denied",
+        "indoor",
+        "GPS-denied",
+        "indoor",
+        "indoor",
+        "indoor",
+        "GPS-denied"
+      ],
+      "screening_status": "Needs human review",
+      "indoor_relevance": "Directly relevant"
     }
   ]
 }
